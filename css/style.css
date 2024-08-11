@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'GenSenRounded TW-L';
+    src: url(../webfonts/GenSenRounded2-L.ttc);
+}
+
+@font-face {
+    font-family: 'GenSenRounded TW-M';
+    src: url(../webfonts/GenSenRounded2-M.ttc);
+}
+
+@font-face {
+    font-family: 'GenSenRounded TW-R';
+    src: url(../webfonts/GenSenRounded2-R.ttc);
+}
+
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 重置字體 */
+body {
+    font-family: 'GenSenRounded TW-R';
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 重置連接 */
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+/* 共用區 */
+:root {
+    /* 主色調 */
+    --primaryG: #6C8C42;
+    --primaryO: #EB9B28;
+
+    /* 輔助 */
+    --text: #514535;
+    --white: #F1F1F1;
+
+    /* 漸層 */
+    --gradient--w: rgb(241, 241, 241), rgb(241, 241, 241, 0);
+}
+
+/* 導覽列*/
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    width: 240px;
+    height: 100%;
+}
+
+.nav-content {
+    display: flex;
+}
+
+/* 導覽列按鈕 */
+.nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+.nav-links a {
+    color: var(--text);
+}
+
+/* 小農商城按鈕 */
+.shopping-btn {
+    background-color: var(--primaryO);
+    border-radius: 0 0 0 45px;
+    padding: 10px 35px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    /* 防止按鈕縮小 */
+    margin-left: 20px;
+    /* 在按鈕和鏈接之間添加間距 */
+}
+
+.shopping-btn a {
+    color: var(--white);
+    /* 按鈕文字顏色 */
+}
+
+.shopping-txt {
+    display: flex;
+    align-items: center;
+}
+
+.shopping-txt img {
+    width: 54px;
+    /* 調整圖片大小 */
+    margin-right: 10px;
+    /* 調整圖片和文字間的間距 */
+}
+
+.shopping-txt1 {
+    padding-left: 15px;
+}
+
+/* 小農與我們 */
+#hero {
+    background-color: var(--white);
+}
+
+.philanthropyBg {
+    position: relative;
+    width: 100%; /* 根據需要調整容器寬度 */
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+/* 咖啡色背景圖 */
+.brownBg {
+    position: absolute;
+    top: 0;
+    left: -500px; 
+    width: 125%;
+    height: auto;
+    z-index: 0; 
+    transform: translate(-10%, -30%);
+    object-fit: cover; 
+}
+
+/* 綠色背景圖 */
+.greenBg {
+    position: absolute;
+    bottom: 0;
+    left: -250px;
+    width: 125%; 
+    height: auto; 
+    z-index: 10; 
+    transform: translate(0%, 50%);
+    object-fit: cover; 
+}
+
+
+
+/* 確保圖像大小調整到容器內 */
+.philanthropyBg img {
+    display: block;
+    /* 去除圖像底部的空白 */
+    width: 100%;
+    /* 使圖像寬度填滿父元素 */
+    height: auto;
+    /* 高度自動調整以保持比例 */
+}
