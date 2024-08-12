@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
 @font-face {
     font-family: 'GenSenRounded TW-L';
     src: url(../webfonts/GenSenRounded2-L.ttc);
@@ -22,7 +25,7 @@
 
 /* 重置字體 */
 body {
-    font-family: 'GenSenRounded TW-R';
+    font-family: 'GenSenRounded TW-R', 'sans-serif';
     font-size: 100%;
     line-height: 1.5;
 }
@@ -59,6 +62,7 @@ a {
 
 /* 共用區 */
 :root {
+    /* color */
     /* 主色調 */
     --primaryG: #6C8C42;
     --primaryO: #EB9B28;
@@ -67,16 +71,28 @@ a {
     --text: #514535;
     --white: #F1F1F1;
 
+    /* 有透明度 */
+    --white-80: rgba(241, 241, 241, .8);
     /* 漸層 */
-    --gradient--w: rgb(241, 241, 241), rgb(241, 241, 241, 0);
+    --gradient-w: linear-gradient(rgb(241, 241, 241) 0%, rgba(241, 241, 241, 0) 80%);
+
+    /* 陰影 */
+    --shadow: rgba(73, 96, 65, .25);
 }
 
 /* 導覽列*/
 #topbar {
+    /* 固定導覽列 */
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    /* 背景 */
+    background: var(--gradient-w);
 }
 
 .logo {
@@ -142,48 +158,192 @@ a {
 /* 小農與我們 */
 #hero {
     background-color: var(--white);
-}
-
-.philanthropyBg {
-    position: relative;
-    width: 100%; /* 根據需要調整容器寬度 */
     height: 100vh;
+}
+
+/* 小農與我們 */
+#about {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
     overflow: hidden;
+}
+
+#about-tit {
+    font-family: 'GenSenRounded TW-M', sans-serif;
+    font-size: 2.5em;
+    letter-spacing: .2em;
+    color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    z-index: 15;
+    transform: translateY(160%);
+}
+
+.orangeSeeds {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 細節 */
+#about-content {
+    display: flex;
+    justify-content: center;
+
+
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    height: auto;
+    transform: translateY(173%);
+    max-width: 1440px;
+
+    color: var(--white);
+    letter-spacing: .35em;
+}
+
+.about-content-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+
+    box-sizing: border-box;
+}
+
+.about-content-form-item {
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.about-content-form-item figure {
+    width: 120px;
+    height: auto;
+
+    padding-right: 10px;
+    /* 控制圖片，頁面放大縮小時不會改變 */
+    flex: 0 0 auto;
+}
+
+.about-content-form-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-content-form-item h2 {
+    font-family: 'GenSenRounded TW-M', 'sans-serif';
+    font-size: 28px;
+    padding-bottom: 5px;
+}
+
+.about-content-form-item p {
+    font-family: 'GenSenRounded TW-R', 'sans-serif';
+    font-size: 20px;
+
+    display: block;
+    width: 100%;
 
 }
 
-/* 咖啡色背景圖 */
+/* 關於我們按鈕 */
+#aboutBtn {
+    position: absolute;
+    bottom: 100px;
+    border-radius: 33px;
+    z-index: 15;
+
+    /* 按鈕設定 */
+    width: 200px;
+    background-color: var(--white-80);
+    cursor: pointer;
+    transition: all .35s ease-in-out;
+
+}
+
+#aboutBtn:hover {
+    background-color: var(--white);
+}
+
+#aboutBtn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+
+    font-family: 'GenSenRounded TW-M', 'sans-serif';
+    font-size: 24px;
+    letter-spacing: .2em;
+}
+
+#aboutBtn a div {
+    padding: 0px 5px;
+}
+
+/* 背景 */
 .brownBg {
     position: absolute;
-    top: 0;
-    left: -500px; 
-    width: 125%;
+    z-index: 0;
+    width: 130%;
     height: auto;
-    z-index: 0; 
-    transform: translate(-10%, -30%);
-    object-fit: cover; 
+    transform: translateX(-20%) translateY(-10%);
 }
 
-/* 綠色背景圖 */
 .greenBg {
     position: absolute;
-    bottom: 0;
-    left: -250px;
-    width: 125%; 
-    height: auto; 
-    z-index: 10; 
-    transform: translate(0%, 50%);
-    object-fit: cover; 
+    z-index: 10;
+    width: 130%;
+    height: auto;
+    top: 200px;
+    left: 20px;
+    transform: translateX(-10%);
+    filter: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+}
+
+.busyFarmers {
+    position: absolute;
+    z-index: 1;
+    width: 20%;
+    height: auto;
+    transform: translateX(-135%) translateY(100%);
 }
 
 
 
-/* 確保圖像大小調整到容器內 */
-.philanthropyBg img {
-    display: block;
-    /* 去除圖像底部的空白 */
-    width: 100%;
-    /* 使圖像寬度填滿父元素 */
-    height: auto;
-    /* 高度自動調整以保持比例 */
+@media(max-width:1440px) {
+    #about-tit {
+        transform: translateY(145%);
+
+    }
+
+    #about-content {
+        transform: translateY(164%);
+        max-width: 1050px;
+    }
+
+    .about-content-form {
+        max-width: 500px;
+    }
+
+    #aboutBtn {
+        bottom: 19px;
+    }
+
+    .greenBg {
+        height: 30px;
+    }
+
+    .brownBg {
+        transform: translateX(-20%) translateY(-5%);
+    }
+
+    .busyFarmers {
+        transform: translateX(-135%) translateY(140%);
+    }
 }
