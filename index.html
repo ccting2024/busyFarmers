@@ -10,14 +10,43 @@
 </head>
 
 <body>
-    <!-- 導覽列 -->
-    <header id="topbar">
+    <!-- 導覽列-白 -->
+    <header id="topbar" class="witheTopbar">
         <h1 class="logo">
-            <a href="./index.html"><img src="../images/1/logo-01.png" alt="小農好忙Logo"></a>
+            <a href="./index.html"><img src="./images/1/logo-01.png" alt="小農好忙Logo"></a>
         </h1>
         <nav class="nav-content">
             <!-- 按鈕區 -->
-            <ul class="nav-links">
+            <ul class="nav-links brown">
+                <li><a href="./html/philanthropy.html">公益理念</a></li>
+                <li><a href="./html/cooperation.html">關於小農</a></li>
+                <li><a href="./html/customized.html">客製果乾</a></li>
+                <li><a href="./html/activity.html">GO 遊趣</a></li>
+            </ul>
+
+            <!-- 小農商城 -->
+            <ul>
+                <h2 class="shopping-btn">
+                    <a href="./html/shopping.html" class="shopping-txt">
+                        <img src="./images/1/bambooHat.png" alt="進入小農商城">
+                        <div>
+                            <div>小農</div>
+                            <div class="shopping-txt1">商城</div>
+                        </div>
+
+                    </a>
+                </h2>
+            </ul>
+        </nav>
+    </header>
+    <!-- 導覽列-綠 -->
+    <header id="topbar " class="greenTopbar hidden">
+        <h1 class="logo">
+            <a href="./index.html"><img src="./images/1/logo-02.svg" alt="小農好忙Logo"></a>
+        </h1>
+        <nav class="nav-content">
+            <!-- 按鈕區 -->
+            <ul class="nav-links green">
                 <li><a href="./html/philanthropy.html">公益理念</a></li>
                 <li><a href="./html/cooperation.html">關於小農</a></li>
                 <li><a href="./html/customized.html">客製果乾</a></li>
@@ -43,8 +72,6 @@
     <main>
         <!-- 主頁 -->
         <section id="hero">
-            <!-- 水果掉落 -->
-            <div></div>
             <!-- 小農與我們 -->
             <div id="about">
                 <!-- 標題 -->
@@ -115,6 +142,8 @@
 
     <!-- 頁尾 -->
     <footer></footer>
+
+    <script src="./busyJs.js"></script>
 </body>
 
 </html>

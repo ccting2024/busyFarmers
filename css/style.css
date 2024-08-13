@@ -64,7 +64,7 @@ a {
 :root {
     /* color */
     /* 主色調 */
-    --primaryG: #6C8C42;
+    --primaryG: rgb(108, 140, 66);
     --primaryO: #EB9B28;
 
     /* 輔助 */
@@ -75,7 +75,7 @@ a {
     --white-80: rgba(241, 241, 241, .8);
     /* 漸層 */
     --gradient-w: linear-gradient(rgb(241, 241, 241) 0%, rgba(241, 241, 241, 0) 80%);
-
+    --gradient-g: linear-gradient(rgb(108, 140, 66) 80%, rgba(108, 140, 66, 0) 20%);
     /* 陰影 */
     --shadow: rgba(73, 96, 65, .25);
 }
@@ -91,8 +91,16 @@ a {
     justify-content: space-between;
     align-items: center;
 
+}
+.witheTopbar{
     /* 背景 */
     background: var(--gradient-w);
+}
+.greenTopbar{
+    background: var(--gradient-g);
+}
+.hidden{
+    display: none;
 }
 
 .logo {
@@ -116,8 +124,11 @@ a {
     padding: 10px;
 }
 
-.nav-links a {
+.nav-links.brown a {
     color: var(--text);
+}
+.nav-links.green a {
+    color: var(--white);
 }
 
 /* 小農商城按鈕 */
@@ -155,7 +166,7 @@ a {
     padding-left: 15px;
 }
 
-/* 小農與我們 */
+/* 首頁 */
 #hero {
     background-color: var(--white);
     height: 100vh;
@@ -255,7 +266,7 @@ a {
 /* 關於我們按鈕 */
 #aboutBtn {
     position: absolute;
-    bottom: 100px;
+    bottom: 50px;
     border-radius: 33px;
     z-index: 15;
 
@@ -346,4 +357,9 @@ a {
     .busyFarmers {
         transform: translateX(-135%) translateY(140%);
     }
+}
+
+/* 最新消息 */
+#news{
+    height: 100vh;
 }
