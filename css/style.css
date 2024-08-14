@@ -70,9 +70,11 @@ a {
     /* 輔助 */
     --text: #514535;
     --white: #F1F1F1;
+    --red:rgb(235, 99, 40);
 
     /* 有透明度 */
     --white-80: rgba(241, 241, 241, .8);
+    --white-40: rgba(241, 241, 241, .4);
     /* 漸層 */
     --gradient-w: linear-gradient(rgb(241, 241, 241) 0%, rgba(241, 241, 241, 0) 80%);
     --gradient-g: linear-gradient(rgb(108, 140, 66) 80%, rgba(108, 140, 66, 0) 20%);
@@ -81,16 +83,19 @@ a {
 }
 
 /* 導覽列*/
-#topbar {
+.topbar {
     /* 固定導覽列 */
     position: fixed;
     z-index: 100;
     width: 100%;
+    top: 0;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    /* 動畫 */
+    transition: opacity 0.35s ease-in-out;
 }
 .witheTopbar{
     /* 背景 */
@@ -98,9 +103,6 @@ a {
 }
 .greenTopbar{
     background: var(--gradient-g);
-}
-.hidden{
-    display: none;
 }
 
 .logo {
@@ -111,7 +113,13 @@ a {
 .nav-content {
     display: flex;
 }
-
+.hidden{
+    opacity: 0;
+}
+#anchor{
+    position: absolute;
+    top: 0;
+}
 /* 導覽列按鈕 */
 .nav-links {
     display: flex;
@@ -184,7 +192,7 @@ a {
 
 #about-tit {
     font-family: 'GenSenRounded TW-M', sans-serif;
-    font-size: 2.5em;
+    font-size: clamp(38px, 4vw + 1rem, 42px);
     letter-spacing: .2em;
     color: var(--white);
 
@@ -250,13 +258,13 @@ a {
 
 .about-content-form-item h2 {
     font-family: 'GenSenRounded TW-M', 'sans-serif';
-    font-size: 28px;
+    font-size: 1.75em;
     padding-bottom: 5px;
 }
 
 .about-content-form-item p {
     font-family: 'GenSenRounded TW-R', 'sans-serif';
-    font-size: 20px;
+    font-size: 1.25em;
 
     display: block;
     width: 100%;
@@ -289,13 +297,14 @@ a {
     padding: 16px;
 
     font-family: 'GenSenRounded TW-M', 'sans-serif';
-    font-size: 24px;
+    font-size: clamp(16px, 4vw + 1rem, 24px);
     letter-spacing: .2em;
 }
 
 #aboutBtn a div {
     padding: 0px 5px;
 }
+
 
 /* 背景 */
 .brownBg {
@@ -326,40 +335,179 @@ a {
 }
 
 
+/* 最新消息 */
+#news{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    color: var(--white);
+    background-image: url(../images/1/news-tim-mossholder-unsplash.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    overflow: hidden;
+    
+}
+/* 最新消息內容 */
+.news-content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    width: 100%;
+    overflow: hidden;
+}
+.news-content-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+}
+.news-content-text{
+    width: 500px;
+}
+.news-content-text h2{
+    font-family: 'Noto Sans TC', 'sans-serif';
+    font-weight: bold;
+    font-size: clamp(38px, 4vw + 1rem, 40px);
+    letter-spacing: .2em;
+
+    display: inline-block;
+}
+.news-content-text-2{
+    padding-left: 144px;
+}
+.news-content-text p{
+    font-family: 'GenSenRounded TW-R', 'sans-serif';
+    font-size: 1em;
+    letter-spacing: .1em;
+
+    margin:40px 20px 40px 0 ;
+}
+
+/* 最新消息按鈕 */
+.newsBtn{
+    display: flex;
+    justify-content: center;
+    background-color: var(--white-40);
+    border-radius: 45px;
+    padding: 5px 20px;
+    transition:  0.35s;
+    
+}
+.newsBtn:hover{
+    background-color: var(--white-80);
+}
+.newsBtn:hover a {
+    color: var(--text);
+}
+
+.newsBtn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+
+    font-family: 'GenSenRounded TW-M', 'sans-serif';
+    font-size: clamp(16px, 4vw + 1rem, 24px);
+    letter-spacing: .2em;
+    color: var(--white);
+}
+
+.newsBtn a div {
+    padding: 0px 5px;
+}
+
+/* 最新消息背景裝飾 */
+
+.newsBg-pre{
+    position:absolute;
+    z-index: 2;
+    width: 130%;
+    bottom: 0;
+
+    filter: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+    transform: translateY(50%) translateX(-20%) rotate(10deg);
+}
+
+/* 合作的小農 */
+#cooperation{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cooperation-tit{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    font-family: 'Noto Sans TC', 'sans-serif';
+    font-weight: 500;
+    font-size: clamp(38px, 4vw + 1rem, 40px);
+    letter-spacing: .2em;
+    color: var(--primaryG);
+}
+/* 合作的小農按鈕 */
+.cooperationBtn{
+    
+    display: flex;
+    justify-content: center;
+    background-color: var(--primaryO);
+    border-radius: 45px;
+    transition:  0.35s;
+    margin: 50px;
+    
+}
+.cooperationBtn:hover{
+    background-color: var(--red);
+}
+
+.cooperationBtn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+
+    font-family: 'GenSenRounded TW-M', 'sans-serif';
+    font-size: clamp(16px, 4vw + 1rem, 24px);
+    letter-spacing: .2em;
+    color: var(--white);
+}
+
+.cooperationBtn a div {
+    padding: 0px 5px;
+}
 @media(max-width:1440px) {
     #about-tit {
         transform: translateY(145%);
-
     }
-
     #about-content {
         transform: translateY(164%);
         max-width: 1050px;
     }
-
     .about-content-form {
         max-width: 500px;
     }
-
     #aboutBtn {
         bottom: 19px;
     }
-
     .greenBg {
         height: 30px;
     }
-
     .brownBg {
         transform: translateX(-20%) translateY(-5%);
     }
-
     .busyFarmers {
         transform: translateX(-135%) translateY(140%);
     }
-}
 
-/* 最新消息 */
-#news{
-    height: 100vh;
 }

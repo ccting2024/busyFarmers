@@ -1,27 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
     let witheTopbar = document.querySelector('.witheTopbar');
     let greenTopbar = document.querySelector('.greenTopbar');
-    let overHero = document.getElementById('news');
+    let anchor = document.getElementById('anchor');
 
     window.addEventListener('scroll', function () {
-        let overHeroTop = overHero.getBoundingClientRect().top + window.scrollY;
-        console.log('scrollY:', window.scrollY, 'overHeroTop:', overHeroTop);
+        let AnchorTop = anchor.getBoundingClientRect().top + window.scrollY;
 
-        if (this.window.scrollY == 0) {
+        if (window.scrollY >= AnchorTop) {
             witheTopbar.classList.add('hidden');
             greenTopbar.classList.remove('hidden');
+        } else {
+            witheTopbar.classList.remove('hidden');
+            greenTopbar.classList.add('hidden');
         }
+    });
+});
 
-        // if (window.scrollY >= overHeroTop) {
+document.addEventListener('DOMContentLoaded', () => {
+    const newsBtn = document.querySelector('.newsBtn');
+    const img = newsBtn.querySelector('.btn-w');
 
-        //     console.log('加入');
-        //     witheTopbar.classList.add('hidden');
-        //     greenTopbar.classList.remove('hidden');
-        // } else {
+    newsBtn.addEventListener('mouseover', () => {
+        img.src = './images/1/arrow-br.svg'; 
+    });
 
-        //     console.log('移出');
-        //     witheTopbar.classList.remove('hidden');
-        //     greenTopbar.classList.add('hidden');
-        // }
+    newsBtn.addEventListener('mouseout', () => {
+        img.src = './images/1/arrow-w.svg'; // 默认图片路径
     });
 });

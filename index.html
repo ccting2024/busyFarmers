@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小農好忙</title>
     <link rel="icon" href="./logo.ico">
+    <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <!-- 導覽列-白 -->
-    <header id="topbar" class="witheTopbar">
+    <header class="topbar witheTopbar">
         <h1 class="logo">
             <a href="./index.html"><img src="./images/1/logo-01.png" alt="小農好忙Logo"></a>
         </h1>
@@ -41,7 +42,7 @@
     </header>
 
     <!-- 導覽列-綠 -->
-    <header id="topbar " class="greenTopbar">
+    <header class="topbar greenTopbar hidden">
         <h1 class="logo">
             <a href="./index.html"><img src="./images/1/logo-02.svg" alt="小農好忙Logo"></a>
         </h1>
@@ -87,14 +88,14 @@
                     <ul class="about-content-form ">
                         <li class="about-content-form-item">
                             <figure><img src="./images/1/about_item-1.png" alt="積極公平貿易"></figure>
-                            <div class="about-text-content">
+                            <div>
                                 <h2>積極公平貿易</h2>
                                 <p>合理的價格、積極的合作，蒐購小農產水果</p>
                             </div>
                         </li>
                         <li class="about-content-form-item">
                             <figure><img src="./images/1/about_item-3.png" alt="重新轉化新生"></figure>
-                            <div class="about-text-content">
+                            <div>
                                 <h2>重新轉化新生</h2>
                                 <p>加工生產過剩、賣相不佳的水果，延續二次生命</p>
                             </div>
@@ -103,24 +104,25 @@
                     <ul class="about-content-form">
                         <li class="about-content-form-item">
                             <figure><img src="./images/1/about_item-2.png" alt="平台實質回饋"></figure>
-                            <div class="about-text-content">
+                            <div>
                                 <h2>平台實質回饋</h2>
                                 <p>建立公平貿易平台，讓消費者的支持直接回饋小農</p>
                             </div>
                         </li>
                         <li class="about-content-form-item">
                             <figure><img src="./images/1/about_item-4.png" alt="多元蓬勃發展"></figure>
-                            <div class="about-text-content">
+                            <div>
                                 <h2>多元蓬勃發展</h2>
                                 <p>協助農場多管道經營，發展精緻型觀光休閒體驗</p>
                             </div>
                         </li>
                     </ul>
                 </div>
+                <!-- 按鈕 -->
                 <div id="aboutBtn">
                     <a href="#">
                         <div>關於我們</div>
-                        <div><img src="./images/1/arrow.svg" alt="關於我們"></div>
+                        <div><img src="./images/1/arrow-br.svg" alt="連結到關於我們"></div>
                     </a>
                 </div>
 
@@ -133,13 +135,104 @@
 
         <!-- 最新消息 -->
         <section id="news">
+            <!-- 換導覽列錨點 -->
+            <div id="anchor"></div>
+
+            <!-- 內容 -->
+            <div class="news-content">
+                <div class="news-content-box">
+                    <div class="news-content-text">
+                        <h2>在欉紅的美味</h2>
+                        <h2 class="news-content-text-2">你還沒嚐過嗎?</h2>
+                        <p>親自採摘水果，品嚐果乾茶，參與果醋、果酒製作，體驗小農生活的美好享受這段獨特的農場體驗！</p>
+                    </div>
+
+                    <!-- 按鈕 -->
+                    <div class="newsBtn">
+                        <a href="#">
+                            <div>查看活動</div>
+                            <div><img class="btn-w" src="./images/1/arrow-w.svg" alt="連結到關於我們"></div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 裝飾層 -->
+            <figure class="newsBg-pre"><img src="./images/1/footer-mountain.png" alt=""></figure>
 
         </section>
 
         <!-- 合作的小農 -->
         <section id="cooperation">
+            <!-- 標題 -->
+            <div class="cooperation-tit">合作的小農</div>
 
-        </section>
+            <!-- 內容 -->
+            <div class="cooperation-container">
+                <div class="cooperation-card">
+                    <div class="card-inner" style="--clr:#fff;">
+                        <div class="box">
+                            <div class="imgBox">
+                                <img src="./images/1/farmer-BeiTouJhongJia.png" alt="北投鍾家">
+                            </div>
+                            <div class="icon">
+                                <a href="#" class="iconBox">
+                                    <span class="material-symbols-outlined">蘋果</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>北投鍾家</h3>
+                        <p>北投「高山蜜蘋果」鮮少人知，鍾家阿姐利用北投高山地區日夜溫差大的氣候特質，讓蘋果甜度增加，是既甜又多汁的品種，而且皮薄、肉質細緻。</p>
+                    </div>
+                </div>
+                <div class="cooperation-card">
+                    <div class="card-inner" style="--clr:#fff;">
+                        <div class="box">
+                            <div class="imgBox">
+                                <img src="./images/1/farmer-JhangMeiAYi.png" alt="張美阿姨">
+                            </div>
+                            <div class="icon">
+                                <a href="#" class="iconBox">
+                                    <span class="material-symbols-outlined">橘子</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>張美阿姨</h3>
+                        <p>呵護加上南投清新的氣候和豐富的土壤，造就了皮薄多汁、果肉香甜中帶有橘子特有的微酸，襯托出不同層次的口感與風味！</p>
+                    </div>
+                </div>
+                <div class="cooperation-card">
+                    <div class="card-inner" style="--clr:#fff;">
+                        <div class="box">
+                            <div class="imgBox">
+                                <img src="./images/1/farmer-SiangGuaSiang.png" alt="香瓜ㄉ鄉">
+                            </div>
+                            <div class="icon">
+                                <a href="#" class="iconBox">
+                                    <span class="material-symbols-outlined">香瓜</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>香瓜ㄉ鄉</h3>
+                        <p>高雄美濃地區在濁水溪的灌溉下，造就了營養的黑土土壤，與得天獨厚的氣候環境，讓香瓜香甜多汁、富有維他命Ｃ與多種營養，酸甜可口。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 按鈕 -->
+            <div class="cooperationBtn">
+                <a href="#">
+                    <div>認識更多</div>
+                    <div><img class="btn-w" src="./images/1/arrow-w.svg" alt="連結到認識更多小農"></div>
+                </a>
+            </div>
     </main>
 
     <!-- 頁尾 -->
