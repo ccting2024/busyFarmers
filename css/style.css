@@ -28,6 +28,11 @@ body {
     font-family: 'GenSenRounded TW-R', 'sans-serif';
     font-size: 100%;
     line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 /* 重置標題 */
@@ -60,6 +65,23 @@ a {
     color: var(--text);
 }
 
+/* input */
+input {
+    flex: 1;
+    border: none;
+    color: var(--text);
+    font-family: 'GenSenRounded TW-R', sans-serif;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: var(--grey);
+}
+
+input:focus {
+    outline: none;
+}
+
 /* 共用區 */
 :root {
     /* color */
@@ -70,7 +92,8 @@ a {
     /* 輔助 */
     --text: #514535;
     --white: #F1F1F1;
-    --red:rgb(235, 99, 40);
+    --red: rgb(235, 99, 40);
+    --grey: #B1AAA1;
 
     /* 有透明度 */
     --white-80: rgba(241, 241, 241, .8);
@@ -97,11 +120,13 @@ a {
     /* 動畫 */
     transition: opacity 0.35s ease-in-out;
 }
-.witheTopbar{
+
+.witheTopbar {
     /* 背景 */
     background: var(--gradient-w);
 }
-.greenTopbar{
+
+.greenTopbar {
     background: var(--gradient-g);
 }
 
@@ -113,13 +138,17 @@ a {
 .nav-content {
     display: flex;
 }
-.hidden{
+
+.hidden {
     opacity: 0;
+    /* display: none; */
 }
-#anchor{
+
+#anchor {
     position: absolute;
     top: 0;
 }
+
 /* 導覽列按鈕 */
 .nav-links {
     display: flex;
@@ -135,6 +164,7 @@ a {
 .nav-links.brown a {
     color: var(--text);
 }
+
 .nav-links.green a {
     color: var(--white);
 }
@@ -174,6 +204,11 @@ a {
     padding-left: 15px;
 }
 
+main {
+    flex: 1;
+    display: block;
+}
+
 /* 首頁 */
 #hero {
     background-color: var(--white);
@@ -192,7 +227,7 @@ a {
 
 #about-tit {
     font-family: 'GenSenRounded TW-M', sans-serif;
-    font-size: clamp(38px, 4vw + 1rem, 42px);
+    font-size: clamp(38px, 2vw + 1rem, 42px);
     letter-spacing: .2em;
     color: var(--white);
 
@@ -297,7 +332,7 @@ a {
     padding: 16px;
 
     font-family: 'GenSenRounded TW-M', 'sans-serif';
-    font-size: clamp(16px, 4vw + 1rem, 24px);
+    font-size: clamp(16px, 2vw, 24px);
     letter-spacing: .2em;
 }
 
@@ -336,7 +371,7 @@ a {
 
 
 /* 最新消息 */
-#news{
+#news {
     display: flex;
     position: relative;
     height: 100vh;
@@ -346,59 +381,67 @@ a {
     background-repeat: no-repeat;
 
     overflow: hidden;
-    
+
 }
+
 /* 最新消息內容 */
-.news-content{
+.news-content {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
+
     width: 100%;
     overflow: hidden;
 }
-.news-content-box{
+
+.news-content-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1%;
 }
-.news-content-text{
+
+.news-content-text {
     width: 500px;
 }
-.news-content-text h2{
+
+.news-content-text h2 {
     font-family: 'Noto Sans TC', 'sans-serif';
     font-weight: bold;
-    font-size: clamp(38px, 4vw + 1rem, 40px);
+    font-size: clamp(38px, 2vw + 1rem, 40px);
     letter-spacing: .2em;
 
     display: inline-block;
 }
-.news-content-text-2{
+
+.news-content-text-2 {
     padding-left: 144px;
 }
-.news-content-text p{
+
+.news-content-text p {
     font-family: 'GenSenRounded TW-R', 'sans-serif';
     font-size: 1em;
     letter-spacing: .1em;
 
-    margin:40px 20px 40px 0 ;
+    margin: 40px 20px 40px 0;
 }
 
 /* 最新消息按鈕 */
-.newsBtn{
+.newsBtn {
     display: flex;
     justify-content: center;
     background-color: var(--white-40);
     border-radius: 45px;
     padding: 5px 20px;
-    transition:  0.35s;
-    
+    transition: 0.35s;
+
 }
-.newsBtn:hover{
+
+.newsBtn:hover {
     background-color: var(--white-80);
 }
+
 .newsBtn:hover a {
     color: var(--text);
 }
@@ -410,7 +453,7 @@ a {
     padding: 16px;
 
     font-family: 'GenSenRounded TW-M', 'sans-serif';
-    font-size: clamp(16px, 4vw + 1rem, 24px);
+    font-size: clamp(16px, 2vw, 24px);
     letter-spacing: .2em;
     color: var(--white);
 }
@@ -421,8 +464,8 @@ a {
 
 /* 最新消息背景裝飾 */
 
-.newsBg-pre{
-    position:absolute;
+.newsBg-pre {
+    position: absolute;
     z-index: 2;
     width: 130%;
     bottom: 0;
@@ -432,8 +475,8 @@ a {
 }
 
 /* 合作的小農 */
-#cooperation{
-    position: absolute;
+#cooperation {
+    position: relative;
     z-index: 3;
     width: 100%;
     height: 100vh;
@@ -445,29 +488,29 @@ a {
     align-items: center;
 }
 
-.cooperation-tit{
+.cooperation-tit {
     display: flex;
     justify-content: center;
     width: 100%;
 
     font-family: 'Noto Sans TC', 'sans-serif';
     font-weight: 500;
-    font-size: clamp(38px, 4vw + 1rem, 40px);
+    font-size: clamp(38px, 3vw + .7rem, 56px);
     letter-spacing: .2em;
     color: var(--primaryG);
 }
+
 /* 合作的小農按鈕 */
-.cooperationBtn{
-    
+.cooperationBtn {
     display: flex;
     justify-content: center;
     background-color: var(--primaryO);
     border-radius: 45px;
-    transition:  0.35s;
+    transition: 0.35s;
     margin: 50px;
-    
 }
-.cooperationBtn:hover{
+
+.cooperationBtn:hover {
     background-color: var(--red);
 }
 
@@ -478,7 +521,7 @@ a {
     padding: 8px;
 
     font-family: 'GenSenRounded TW-M', 'sans-serif';
-    font-size: clamp(16px, 4vw + 1rem, 24px);
+    font-size: clamp(16px, 2vw, 24px);
     letter-spacing: .2em;
     color: var(--white);
 }
@@ -486,28 +529,305 @@ a {
 .cooperationBtn a div {
     padding: 0px 5px;
 }
+
+/* 小農商城-banner */
+#shoppingBanner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/shopping/marian-hearne-I35_JP2Stwg-unsplash.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.shoppingBanner-tit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20%;
+}
+
+.shoppingBanner-tit h1 {
+    font-family: 'Noto Sans TC', 'sans-serif';
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 56px);
+    letter-spacing: .2em;
+    color: var(--primaryO);
+
+}
+
+.shoppingBanner-Bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.shoppingBanner-Text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    bottom: 80%;
+}
+
+.shoppingBanner-Text-box img {
+    width: clamp(16px, 15vw, 244px);
+    ;
+}
+
+.shoppingBanner-Text-box h3 {
+    font-family: 'Noto Sans TC', 'sans-serif';
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 40px);
+    letter-spacing: .2em;
+    color: var(--primaryG);
+}
+
+.shopping-pre {
+    width: 100%;
+    position: absolute;
+    bottom: -100px;
+    z-index: 1;
+    filter: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+}
+
+/* 小農商城-商品選擇 */
+#productList {
+    position: relative;
+    z-index: 2;
+    top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    width: 100%;
+    height: 70vh;
+
+    /* 背景 */
+    background-image: url(../images/shopping/shoppingBtnAreaBg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.productList-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.productList-item-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 50px;
+    text-align: center;
+}
+
+.productList-item-box img {
+    width: clamp(96px, 10vw, 240px);
+    height: auto;
+
+}
+
+.productList-item-box h3 {
+    margin: 20px 0px;
+    font-family: 'GenSenRounded TW-M', 'sans-serif';
+    font-size: clamp(16px, 2vw, 24px);
+    letter-spacing: .2em;
+    color: var(--text);
+}
+
+/* 搜尋 */
+.productList-search {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+
+}
+
+.productList-search form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.productList-search-input {
+    padding: 8px 48px;
+    border: 1.5px solid var(--primaryG);
+    border-radius: 99px;
+}
+
+.search-img {
+    position: absolute;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+}
+
+.productList-pre {
+    width: 110%;
+    transform: translateY(4%);
+}
+
+/* 小農商城-特色介紹 */
+#features {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    /* 背景 */
+    background-image: url(../images/shopping/greenBg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.features-tip {
+    font-family: 'Noto Sans TC', 'sans-serif';
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 40px);
+    letter-spacing: .2rem;
+    color: var(--white);
+}
+
+.features-secret {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+}
+
+.features-secret-box {
+    display: flex;
+    justify-content: center;
+    align-items:;
+    text-align: center;
+
+    margin-bottom: 10px;
+    width: 280px;
+    height: auto;
+
+    &:nth-child(1) {
+        background-color: rgba(241, 241, 241,.3);
+    }
+
+    &:nth-child(2) {
+        background-color: rgba(235, 155, 40,.3);
+    }
+
+    &:nth-child(3) {
+        background-color: rgba(81, 69, 53,.3);
+    }
+}
+
+.features-secret-box img {
+    width: 200px;
+    height: auto;
+}
+.features-secret-box h2{
+    font-family: 'GenSenRounded TW-R', 'sans-serif';
+    font-size: 28px;
+    letter-spacing: .2rem;
+    color: var(--white);
+}
+/* 尾頁 */
+footer {
+    width: 100%;
+    height: 500px;
+    background-color: var(--red);
+    font-size: 72px;
+    letter-spacing: .2rem;
+    color: var(--white);
+    text-align: center;
+    line-height: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+.underConstruction {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--red);
+    font-size: 72px;
+    letter-spacing: .2rem;
+    color: var(--white);
+    text-align: center;
+    line-height: 100vh;
+}
+
 @media(max-width:1440px) {
     #about-tit {
         transform: translateY(145%);
     }
+
     #about-content {
         transform: translateY(164%);
         max-width: 1050px;
     }
+
     .about-content-form {
         max-width: 500px;
     }
+
     #aboutBtn {
         bottom: 19px;
     }
+
     .greenBg {
         height: 30px;
     }
+
     .brownBg {
         transform: translateX(-20%) translateY(-5%);
     }
+
     .busyFarmers {
         transform: translateX(-135%) translateY(140%);
     }
 
+    .cooperation-tit {
+        font-size: clamp(38px, 2vw + .7rem, 72px);
+    }
+
+    .shoppingBanner-Text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        bottom: 50px;
+    }
+
+    .productList-pre {
+        bottom: -155px;
+    }
+}
+
+@media(max-width:1280px) {
+    .shopping-pre {
+        bottom: -50px;
+    }
+
+    .productList-pre {
+        transform: translateY(6%);
+    }
 }

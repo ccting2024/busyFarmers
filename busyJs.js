@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = newsBtn.querySelector('.btn-w');
 
     newsBtn.addEventListener('mouseover', () => {
-        img.src = './images/1/arrow-br.svg'; 
+        img.src = '../images/1/arrow-br.svg'; 
     });
 
     newsBtn.addEventListener('mouseout', () => {
-        img.src = './images/1/arrow-w.svg'; // 默认图片路径
+        img.src = './images/1/arrow-w.svg'; 
     });
 });

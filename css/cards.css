@@ -44,14 +44,14 @@ a {
 
     h3 {
         font-family: 'GenSenRounded TW-M', sans-serif;
-        font-size: clamp(16px, 4vw + 1rem, 24px);
+        font-size: clamp(16px, 2vw, 24px);
         letter-spacing: .2em;
     }
 
     p {
         margin: 0.625rem 0 1.25rem;
         font-family: 'GenSenRounded TW-R', sans-serif;
-        font-size: clamp(14px, 4vw + 1rem, 16px);
+        font-size: clamp(14px, 2vw, 16px);
         letter-spacing: .1em;
         display: -webkit-box;
         -webkit-box-orient: vertical;
