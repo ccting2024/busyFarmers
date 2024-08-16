@@ -28,3 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = './images/1/arrow-w.svg'; 
     });
 });
+
+
