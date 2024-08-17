@@ -25,7 +25,7 @@
 
 /* 重置字體 */
 body {
-    font-family: 'GenSenRounded TW-R', 'sans-serif';
+    font-family: var(--GenSenRounded-R);
     font-size: 100%;
     line-height: 1.5;
 
@@ -35,6 +35,7 @@ body {
     margin: 0;
 
     position: relative;
+    color: var(--text);
 }
 
 /* 重置標題 */
@@ -72,7 +73,7 @@ input {
     flex: 1;
     border: none;
     color: var(--text);
-    font-family: 'GenSenRounded TW-R', sans-serif;
+    font-family: var(--GenSenRounded-R);
     font-size: 16px;
 }
 
@@ -91,13 +92,12 @@ address {
 
 /* 共用區 */
 :root {
-    /* color */
     /* 主色調 */
-    --primaryG: rgb(108, 140, 66);
-    --primaryO: #EB9B28;
+    --primaryG: #6c8c42;
+    --primaryO: rgb(235, 155, 40);
 
     /* 輔助 */
-    --text: #514535;
+    --text: rgb(81, 69, 53);
     --white: #F1F1F1;
     --red: rgb(235, 99, 40);
     --grey: #B1AAA1;
@@ -105,11 +105,19 @@ address {
     /* 有透明度 */
     --white-80: rgba(241, 241, 241, .8);
     --white-40: rgba(241, 241, 241, .4);
+    --orange-50: rgba(235, 155, 40, .5);
+    --text-80: rgba(81, 69, 53, .8);
     /* 漸層 */
     --gradient-w: linear-gradient(rgb(241, 241, 241) 0%, rgba(241, 241, 241, 0) 80%);
     --gradient-g: linear-gradient(rgb(108, 140, 66) 80%, rgba(108, 140, 66, 0) 20%);
     /* 陰影 */
-    --shadow: rgba(73, 96, 65, .25);
+    --shadow: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+
+    /* 文字 */
+    --NotoSans: 'Noto Sans TC', 'sans-serif';
+    --GenSenRounded-L: 'GenSenRounded TW-L', sans-serif;
+    --GenSenRounded-M: 'GenSenRounded TW-M', sans-serif;
+    --GenSenRounded-R: 'GenSenRounded TW-R', sans-serif;
 }
 
 /* 導覽列*/
@@ -229,14 +237,14 @@ footer {
     position: absolute;
     z-index: 100;
     bottom: 0;
-    filter: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+    filter: var(--shadow);
 }
 
 .footer-back {
     position: absolute;
     z-index: 99;
     bottom: 0;
-    filter: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+    filter: var(--shadow);
 }
 
 /* footer 資訊區*/
@@ -252,7 +260,7 @@ footer {
     justify-content: flex-end;
 
 
-    font-family: 'GenSenRounded TW-L', sans-serif;
+    font-family: var(--GenSenRounded-L);
     font-size: 16px;
     letter-spacing: .1em;
 }
@@ -283,7 +291,7 @@ footer {
 
     margin-bottom: 60px;
 
-    font-family: 'GenSenRounded TW-R', sans-serif;
+    font-family: var(--GenSenRounded-R);
     font-size: 24px;
     letter-spacing: .1em;
 }
@@ -319,6 +327,108 @@ footer {
     padding: 0 15px 15px 0;
 }
 
+/* 搜尋 */
+.productList-search form {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.productList-search-input {
+    padding: 8px 48px;
+    border: 1.5px solid var(--primaryG);
+    border-radius: 99px;
+}
+
+/* title */
+.tit-box {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 5% .7% 5%;
+}
+
+.tit-box-text {
+    display: flex;
+    align-items: center;
+
+}
+
+.tit-box-text svg {
+    width: 15%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+
+.tit-box-text h3 {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size: clamp(32px, 2.3rem, 36px);
+    letter-spacing: .2em;
+    color: var(--primaryG);
+    white-space: nowrap;
+}
+
+.tit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.tit-btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 25px;
+    border: 2px solid var(--primaryG);
+    border-radius: 45px;
+
+}
+
+.tit-btn-box h3 {
+    font-family: var(--GenSenRounded-M);
+    font-size: clamp(14px, 1rem, 18px);
+    letter-spacing: .1em;
+    color: var(--primaryG);
+    white-space: nowrap;
+
+}
+
+.tit-btn-icon {
+    fill: var(--primaryG);
+    width: auto;
+    height: clamp(16px, 2vw, 20px);
+
+}
+
+.tit-btn-box:hover {
+    background-color: var(--primaryG);
+    transition: all .3s ease-in-out;
+}
+
+.tit-btn-box:hover h3 {
+    color: var(--white);
+    transition: all .3s ease-in-out;
+}
+
+.tit-btn-box:hover .tit-btn-icon {
+    fill: var(--white);
+    transition: all .3s ease-in-out;
+
+}
 
 /* 首頁 */
 #hero {
@@ -337,7 +447,7 @@ footer {
 }
 
 #about-tit {
-    font-family: 'GenSenRounded TW-M', sans-serif;
+    font-family: var(--GenSenRounded-M);
     font-size: clamp(38px, 2vw + 1rem, 42px);
     letter-spacing: .2em;
     color: var(--white);
@@ -409,7 +519,7 @@ footer {
 }
 
 .about-content-form-item p {
-    font-family: 'GenSenRounded TW-R', 'sans-serif';
+    font-family: var(--GenSenRounded-R);
     font-size: 1.25em;
 
     display: block;
@@ -469,7 +579,7 @@ footer {
     top: 200px;
     left: 20px;
     transform: translateX(-10%);
-    filter: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+    filter: var(--shadow);
 }
 
 .busyFarmers {
@@ -518,7 +628,7 @@ footer {
 }
 
 .news-content-text h2 {
-    font-family: 'Noto Sans TC', 'sans-serif';
+    font-family: var(--NotoSans);
     font-weight: bold;
     font-size: clamp(38px, 2vw + 1rem, 40px);
     letter-spacing: .2em;
@@ -531,7 +641,7 @@ footer {
 }
 
 .news-content-text p {
-    font-family: 'GenSenRounded TW-R', 'sans-serif';
+    font-family: var(--GenSenRounded-R);
     font-size: 1em;
     letter-spacing: .1em;
 
@@ -579,7 +689,7 @@ footer {
     width: 130%;
     bottom: 0;
 
-    filter: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+    filter: var(--shadow);
     transform: translateY(50%) translateX(-20%) rotate(10deg);
 }
 
@@ -602,7 +712,7 @@ footer {
     justify-content: center;
     width: 100%;
 
-    font-family: 'Noto Sans TC', 'sans-serif';
+    font-family: var(--NotoSans);
     font-weight: 500;
     font-size: clamp(38px, 3vw + .7rem, 56px);
     letter-spacing: .2em;
@@ -679,7 +789,7 @@ footer {
 }
 
 .shoppingBanner-tit-box h1 {
-    font-family: 'Noto Sans TC', 'sans-serif';
+    font-family: var(--NotoSans);
     font-weight: 500;
     font-size: clamp(38px, 2vw + 1rem, 56px);
     letter-spacing: .2em;
@@ -710,7 +820,7 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+    filter: var(--shadow);
     z-index: -1;
 }
 
@@ -736,14 +846,9 @@ footer {
     text-align: center;
 }
 
-.productList-search form {
-    display: flex;
-    position: relative;
-    align-items: center;
-}
 
 .productList-tit-box h3 {
-    font-family: 'Noto Sans TC', 'sans-serif';
+    font-family: var(--NotoSans);
     font-weight: 500;
     font-size: clamp(38px, 2vw + 1rem, 40px);
     letter-spacing: .2em;
@@ -763,11 +868,7 @@ footer {
     color: var(--text);
 }
 
-.productList-search-input {
-    padding: 8px 48px;
-    border: 1.5px solid var(--primaryG);
-    border-radius: 99px;
-}
+
 
 .search-img {
     position: absolute;
@@ -799,14 +900,14 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: drop-shadow(0 -6px 6px rgba(73, 96, 65, .25));
+    filter: var(--shadow);
     z-index: -1;
 }
 
 .features-tip {
     display: flex;
     align-items: flex-end;
-    font-family: 'GenSenRounded TW-M', sans-serif;
+    font-family: var(--GenSenRounded-M);
     font-size: clamp(38px, 2vw + 1rem, 42px);
     letter-spacing: .2em;
     color: var(--white);
@@ -854,7 +955,7 @@ footer {
 }
 
 .features-secret-box h2 {
-    font-family: 'GenSenRounded TW-M', sans-serif;
+    font-family: var(--GenSenRounded-M);
     font-size: clamp(24px, 2vw + 1rem, 28px);
     letter-spacing: .2em;
     color: var(--white);
@@ -863,6 +964,183 @@ footer {
 
 }
 
+/* 關於小農-tit */
+#farmer-search {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+#farmer-search::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.farmer-search-tit {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.farmer-search-productList-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .7%;
+}
+
+
+
+/* 關於小農-內容 */
+.farmer-search-container {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+}
+
+.farmer-search-buttons {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.farmer-search-display {
+    width: 100%;
+    height: auto;
+}
+
+.farmer-search-buttons-category {
+    width: 100%;
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.filter-buttons-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    overflow-y: auto;
+}
+
+.search-options {
+    font-family: var(--GenSenRounded-L);
+    font-size: 20px;
+    letter-spacing: .2rem;
+
+    background-color: var(--orange-50);
+    cursor: pointer;
+    color: var(--text);
+
+    padding: 10px 20px;
+    border-radius: 45px;
+    margin: 0 10px;
+}
+
+.search-options.active {
+    background-color: var(--primaryO);
+    color: var(--white);
+}
+
+.filter-button-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.filter-button-title {
+    font-family: var(--GenSenRounded-M);
+    font-size: clamp(16px, 2vw, 24px);
+    letter-spacing: .2rem;
+    color: var(--primaryG);
+    margin-bottom: .5rem;
+}
+
+.filter-buttons {
+    font-family: var(--GenSenRounded-R);
+    letter-spacing: .05rem;
+    font-size: clamp(12px, 1rem, 14px);
+
+    border: 2px solid var(--primaryO);
+    border-radius: 20px;
+    padding: 2px 10px;
+    margin: 0 5px 10px 0;
+
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-options:hover {
+    box-shadow: inset 0 0 0 3px var(--primaryO);
+    transition: all .35s ease-in-out;
+}
+
+.filter-buttons:hover {
+    background-color: var(--orange-50);
+    transition: all .2s ease-in-out;
+}
+
+/* 關於小農-顯示畫面 */
+.farmer-search-display {
+    position: relative;
+}
+
+.map-display {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primaryG);
+    z-index: 1;
+}
+
+.map-display.active {
+    display: none;
+}
+
+.farmer-display {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primaryO);
+
+}
+
+.farmer-display.active {
+    display: none;
+}
+/* 加入我們 */
+.joinUs-tit{
+    width: 100%;
+    height: auto;
+}
+#joinUs{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.promotion-sections{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.promotion-item{
+    display: flex;
+}
 @media(max-width:1440px) {
     #about-tit {
         transform: translateY(145%);
