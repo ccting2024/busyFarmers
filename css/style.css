@@ -348,18 +348,19 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 0 5% .7% 5%;
+    margin: 0 5% 1% 5%;
 }
 
 .tit-box-text {
     display: flex;
     align-items: center;
+    color: var(--primaryG);
 
 }
 
 .tit-box-text svg {
-    width: 15%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     margin-right: 5px;
@@ -395,6 +396,7 @@ footer {
     padding: 5px 25px;
     border: 2px solid var(--primaryG);
     border-radius: 45px;
+    color: var(--primaryG);
 
 }
 
@@ -408,13 +410,13 @@ footer {
 }
 
 .tit-btn-icon {
-    fill: var(--primaryG);
     width: auto;
     height: clamp(16px, 2vw, 20px);
 
 }
 
 .tit-btn-box:hover {
+    color: var(--white);
     background-color: var(--primaryG);
     transition: all .3s ease-in-out;
 }
@@ -424,11 +426,6 @@ footer {
     transition: all .3s ease-in-out;
 }
 
-.tit-btn-box:hover .tit-btn-icon {
-    fill: var(--white);
-    transition: all .3s ease-in-out;
-
-}
 
 /* 首頁 */
 #hero {
@@ -970,15 +967,8 @@ footer {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-}
-
-#farmer-search::before {
-    content: "";
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 100vh;
-    z-index: -1;
 }
 
 .farmer-search-tit {
@@ -1120,26 +1110,62 @@ footer {
 .farmer-display.active {
     display: none;
 }
+
 /* 加入我們 */
-.joinUs-tit{
-    width: 100%;
-    height: auto;
-}
-#joinUs{
+#joinUs {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.promotion-sections {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
-.promotion-sections{
+
+.promotion-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+.promotion-item-details{
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
-.promotion-item{
+.promotion-item-opportunity{
+    margin: 0 20px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.promotion-item figure{
+    display: block;
+    border-radius: 45px;
+}
+.promotion-item h4{
+    width: 50%;
+    box-sizing: border-box;
+    font-family: var(--GenSenRounded-M);
+    font-size: 24px;
+    letter-spacing: .2rem;
+}
+.promotion-sections p{
+    font-family: (var(--GenSenRounded-R));
+    display: inline-block;
+    font-size: clamp(16px,1rem,1rem);
 }
 @media(max-width:1440px) {
     #about-tit {

@@ -45,18 +45,20 @@ if (mapSearchBtn && farmerSearchBtn) {
         activeButton.classList.add('active');
         inactiveButton.classList.remove('active');
     }
+    function displaySearch(active,inactive){
+        active.classList.add('active');
+        inactive.classList.remove('active');
+    }
 
     // 點選事件-地圖
     function showMap() {
-        mapDisplay.classList.add('active');
-        farmerDisplay.classList.remove('active');
+        displaySearch(mapDisplay,farmerDisplay);
         setActiveButton(mapSearchBtn, farmerSearchBtn);
     }
 
     // 點選事件-小農
     function showFarmer() {
-        mapDisplay.classList.remove('active');
-        farmerDisplay.classList.add('active');
+        displaySearch(farmerDisplay,mapDisplay);
         setActiveButton(farmerSearchBtn, mapSearchBtn);
     }
     // 進入尋找小農時先開啟依地圖
