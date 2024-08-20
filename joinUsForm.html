@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>表單填寫 - 小農好忙</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <!-- 導覽列-綠 -->
     <header class="topbar greenTopbar">
         <h1 class="logo">
-            <a href="./index.html"><img src="../images/1/logo-02.svg" alt="小農好忙Logo"></a>
+            <a href="./index.html"><img src="./images/shared/logo-02.svg" alt="小農好忙Logo"></a>
         </h1>
         <nav class="nav-content">
             <!-- 按鈕區 -->
@@ -27,10 +27,10 @@
             <ul>
                 <h2 class="shopping-btn">
                     <a href="./shopping.html" class="shopping-txt">
-                        <img src="../images/1/bambooHat.png" alt="進入小農商城">
+                        <img src="./images/shared/bambooHat.png" alt="進入小農商城">
                         <div>
                             <div>小農</div>
-                            <div class="shopping-txt1">商城</div>
+                            <div class="shopping-txtl">商城</div>
                         </div>
 
                     </a>
@@ -149,13 +149,13 @@
                                         <input type="text" id="name" name="name" class="name" placeholder="請輸入姓名"
                                             required>
                                         <select name="gender" id="gender" class="gender" required>
-                                            <option value="" disabled selected>性別</option>
+                                            <option value="" disabled selected>稱呼</option>
                                             <option value="Mr.">先生</option>
                                             <option value="Ms.">女士</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group form-group-sec">
+                                <div class="form-group-sec">
                                     <label for="contact-method" class="form-group-title">聯絡方式</label>
                                     <select id="contact-method" name="contact-method" class="contact-method"
                                         aria-placeholder="請選擇聯絡方式" required>
@@ -164,17 +164,10 @@
                                         <option value="email">電子郵件</option>
                                     </select>
                                     <input type="text" id="inputField" placeholder="請輸入手機或email" required>
-                                </div>
-                            </form>
-
-                            <div class="section-title">農場資訊</div>
-                            <form class="form-farm-info">
-                                <div class="form-group form-group-sec">
+                                    <div class="section-title">農場資訊</div>
                                     <label for="farm-name" class="form-group-title">農場名稱</label>
                                     <input type="text" id="farm-name" name="farm-name" class="farm-name"
                                         placeholder="請輸入農場名稱">
-                                </div>
-                                <div class="form-group form-group-sec">
                                     <label for="farm-region" class="form-group-title">農場地區</label>
                                     <select id="farm-region" name="farm-region" class="farm-region">
                                         <optgroup label=""></optgroup>
@@ -211,14 +204,9 @@
                                             <option value="Island">金門縣</option>
                                             <option value="Island">連江縣</option>
                                         </optgroup>
-
                                     </select>
-                                </div>
-                                <div class="form-group form-group-sec">
                                     <label for="fruit-type" class="form-group-title">種植水果</label>
                                     <input type="text" id="fruit-type" name="fruit-type" class="fruit-type">
-                                </div>
-                                <div class="form-group form-group-sec">
                                     <div class="form-group-title">商品種類(可複選)</div>
                                     <div class="product-type-box">
                                         <input type="checkbox" id="driedFruit" name="productType" value="driedFruit">
@@ -232,23 +220,23 @@
                                         <label for="fruitWine">果酒</label>
                                     </div>
                                 </div>
-                            </form>
 
-                            <div class="section-title">其他</div>
-                            <form class="form-other-info">
-                                <div class="form-group form-group-other">
+                                <div class="section-title">其他</div>
+                                <div class="form-group-other">
                                     <label for="comments" class="form-group-title">有話要說</label>
-                                    <input type="text" id="comments" name="comments"class='comments' placeholder="期待與您進一步交流，探討合作的可能性！">
+                                    <input type="text" id="comments" name="comments" class='comments'
+                                        placeholder="期待與您進一步交流！">
+                                    <input type="button" value="送出" class="form-submit">
                                 </div>
-                            </form>
                         </div>
 
-                        <!-- 送出 -->
-                        <div class="form-submit">
-                            <input type="button" value="送出">
-                        </div>
+                        </form>
                     </div>
+
+                    <!-- 送出 -->
+
                 </div>
+            </div>
             </div>
 
         </section>
