@@ -18,19 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
             greenTopbar.classList.add('hidden');
         }
     });
-
-    // 改變svg
-    const newsBtn = document.querySelector('.newsBtn');
-    const img = newsBtn.querySelector('.btn-w');
-
-    newsBtn.addEventListener('mouseover', () => {
-        img.src = '../images/1/arrow-br.svg';
-    });
-
-    newsBtn.addEventListener('mouseout', () => {
-        img.src = './images/1/arrow-w.svg';
-    });
-
 });
 const mapSearchBtn = document.getElementById('map-search-btn');
 const farmerSearchBtn = document.getElementById('farmer-search-btn');
@@ -45,20 +32,20 @@ if (mapSearchBtn && farmerSearchBtn) {
         activeButton.classList.add('active');
         inactiveButton.classList.remove('active');
     }
-    function displaySearch(active,inactive){
+    function displaySearch(active, inactive) {
         active.classList.add('active');
         inactive.classList.remove('active');
     }
 
     // 點選事件-地圖
     function showMap() {
-        displaySearch(mapDisplay,farmerDisplay);
+        displaySearch(mapDisplay, farmerDisplay);
         setActiveButton(mapSearchBtn, farmerSearchBtn);
     }
 
     // 點選事件-小農
     function showFarmer() {
-        displaySearch(farmerDisplay,mapDisplay);
+        displaySearch(farmerDisplay, mapDisplay);
         setActiveButton(farmerSearchBtn, mapSearchBtn);
     }
     // 進入尋找小農時先開啟依地圖

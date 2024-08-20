@@ -40,7 +40,6 @@
     </header>
     <main>
         <section id="joinUs-form">
-
             <!-- title -->
             <div id="title" class="tit-box">
                 <!-- 標題 -->
@@ -92,113 +91,164 @@
                     </div>
                 </a>
             </div>
-
             <!-- 內容 -->
             <div class="joinUs-form-container">
-                <!-- 左側列表 -->
-                <div class="list-container">
-                    <!-- 基本資料 -->
-                    <div class="form-list">
-                        <h5 class="list-title">基本資料</h5>
-                        <div class="list-content">
-                            <!-- 姓名 -->
-                            <h6 class="list-name">姓名</h6>
-                            <!-- 手機 -->
-                            <h6 class="list-phone">手機</h6>
-                            <!-- 聯絡方式 -->
-                            <h6 class="list-contact">聯絡方式</h6>
+                <div class="joinUs-form-container-box">
+                    <!-- 左側列表 -->
+                    <div class="list-container">
+                        <div class="list-container-box">
+                            <!-- 基本資料 -->
+                            <div class="form-list">
+                                <h5 class="list-title">基本資料</h5>
+                                <div class="list-content">
+                                    <!-- 姓名 -->
+                                    <h6 class="list-name">姓名</h6>
+                                    <!-- 手機 -->
+                                    <h6 class="list-phone">手機</h6>
+                                    <!-- 聯絡方式 -->
+                                    <h6 class="list-contact">聯絡方式</h6>
+                                </div>
+                            </div>
+
+
+                            <!-- 農場資訊 -->
+                            <div class="form-list">
+                                <h5 class="list-title">農場資訊</h5>
+                                <div class="list-content">
+                                    <!-- 農場名稱 -->
+                                    <h6 class="field-farm-name">農場名稱</h6>
+                                    <!-- 農場地區 -->
+                                    <h6 class="field-farm-location">農場地區</h6>
+                                    <!-- 水果種類 -->
+                                    <h6 class="field-fruit-type">水果種類</h6>
+                                    <!-- 商品種類 -->
+                                    <h6 class="field-product-type">商品種類</h6>
+                                </div>
+                            </div>
+
+                            <!-- 其他 -->
+                            <div class="form-list">
+                                <h5 class="list-title">其他</h5>
+                                <div class="list-content">
+                                    <!-- 有話要說 -->
+                                    <h6 class="field-comments">有話要說</h6>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 農場資訊 -->
-                    <div class="form-list">
-                        <h5 class="list-title">農場資訊</h5>
-                        <div class="list-content">
-                            <!-- 農場名稱 -->
-                            <h6 class="field-farm-name">農場名稱</h6>
-                            <!-- 農場地區 -->
-                            <h6 class="field-farm-location">農場地區</h6>
-                            <!-- 水果種類 -->
-                            <h6 class="field-fruit-type">水果種類</h6>
-                            <!-- 商品種類 -->
-                            <h6 class="field-product-type">商品種類</h6>
-                        </div>
-                    </div>
+                    <!-- 右側表單 -->
+                    <div class="form">
+                        <!-- 基本資料 -->
+                        <div class="form-container">
+                            <div class="section-title">基本資料</div>
+                            <form class="form-basic-info">
+                                <div class="form-group">
+                                    <label for="name" class="form-group-title">姓名</label>
+                                    <div class="form-group-box">
+                                        <input type="text" id="name" name="name" class="name" placeholder="請輸入姓名"
+                                            required>
+                                        <select name="gender" id="gender" class="gender" required>
+                                            <option value="" disabled selected>性別</option>
+                                            <option value="Mr.">先生</option>
+                                            <option value="Ms.">女士</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group form-group-sec">
+                                    <label for="contact-method" class="form-group-title">聯絡方式</label>
+                                    <select id="contact-method" name="contact-method" class="contact-method"
+                                        aria-placeholder="請選擇聯絡方式" required>
+                                        <option value="" selected>請選擇</option>
+                                        <option value="phone">手機</option>
+                                        <option value="email">電子郵件</option>
+                                    </select>
+                                    <input type="text" id="inputField" placeholder="請輸入手機或email" required>
+                                </div>
+                            </form>
 
-                    <!-- 其他 -->
-                    <div class="form-list">
-                        <h5 class="list-title">其他</h5>
-                        <div class="list-content">
-                            <!-- 有話要說 -->
-                            <h6 class="field-comments">有話要說</h6>
+                            <div class="section-title">農場資訊</div>
+                            <form class="form-farm-info">
+                                <div class="form-group form-group-sec">
+                                    <label for="farm-name" class="form-group-title">農場名稱</label>
+                                    <input type="text" id="farm-name" name="farm-name" class="farm-name"
+                                        placeholder="請輸入農場名稱">
+                                </div>
+                                <div class="form-group form-group-sec">
+                                    <label for="farm-region" class="form-group-title">農場地區</label>
+                                    <select id="farm-region" name="farm-region" class="farm-region">
+                                        <optgroup label=""></optgroup>
+                                        <option value="" selected>請選擇</option>
+                                        <optgroup label="北部">
+                                            <option value="north">臺北市</option>
+                                            <option value="north">新北市</option>
+                                            <option value="north">基隆市</option>
+                                            <option value="north">宜蘭縣</option>
+                                            <option value="north">桃園市</option>
+                                            <option value="north">新竹縣</option>
+                                            <option value="north">新竹市</option>
+                                        </optgroup>
+                                        <optgroup label="中部">
+                                            <option value="central">苗栗縣</option>
+                                            <option value="central">臺中市</option>
+                                            <option value="central">彰化縣</option>
+                                            <option value="central">南投縣</option>
+                                            <option value="central">雲林縣</option>
+                                        </optgroup>
+                                        <optgroup label="南部">
+                                            <option value="South">嘉義縣</option>
+                                            <option value="South">嘉義市</option>
+                                            <option value="South">台南市</option>
+                                            <option value="South">高雄市</option>
+                                            <option value="South">屏東縣</option>
+                                        </optgroup>
+                                        <optgroup label="東部">
+                                            <option value="east">花蓮縣</option>
+                                            <option value="east">台東縣</option>
+                                        </optgroup>
+                                        <optgroup label="離島">
+                                            <option value="Island">澎湖縣</option>
+                                            <option value="Island">金門縣</option>
+                                            <option value="Island">連江縣</option>
+                                        </optgroup>
+
+                                    </select>
+                                </div>
+                                <div class="form-group form-group-sec">
+                                    <label for="fruit-type" class="form-group-title">種植水果</label>
+                                    <input type="text" id="fruit-type" name="fruit-type" class="fruit-type">
+                                </div>
+                                <div class="form-group form-group-sec">
+                                    <div class="form-group-title">商品種類(可複選)</div>
+                                    <div class="product-type-box">
+                                        <input type="checkbox" id="driedFruit" name="productType" value="driedFruit">
+                                        <label for="driedFruit">果乾</label>
+                                        <input type="checkbox" id="fruitJam" name="productType" value="fruitJam">
+                                        <label for="fruitJam">果醬</label>
+                                        <input type="checkbox" id="fruitVinegar" name="productType"
+                                            value="fruitVinegar">
+                                        <label for="fruitVinegar">果醋</label>
+                                        <input type="checkbox" id="fruitWine" name="productType" value="fruitWine">
+                                        <label for="fruitWine">果酒</label>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="section-title">其他</div>
+                            <form class="form-other-info">
+                                <div class="form-group form-group-other">
+                                    <label for="comments" class="form-group-title">有話要說</label>
+                                    <input type="text" id="comments" name="comments"class='comments' placeholder="期待與您進一步交流，探討合作的可能性！">
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- 送出 -->
+                        <div class="form-submit">
+                            <input type="button" value="送出">
                         </div>
                     </div>
                 </div>
-
-                <!-- 右側表單 -->
-                <div class="form">
-                    <!-- 基本資料 -->
-                    <div class="section-title">基本資料</div>
-                    <form class="form-basic-info">
-                        <div class="form-group">
-                            <!-- 姓名 -->
-                            <label for="name">姓名</label>
-                            <input type="text" id="name" name="name" class="name">
-                        </div>
-                        <div class="form-group">
-                            <!-- 聯絡方式 -->
-                            <label for="contact-method">聯絡方式</label>
-                            <select id="contact-method" name="contact-method" class="contact-method"></select>
-                        </div>
-                        <div class="form-group">
-                            <!-- 手機 -->
-                            <label for="phone">手機</label>
-                            <input type="tel" id="phone" name="phone" class="phone">
-                        </div>
-                    </form>
-
-                    <!-- 農場資訊 -->
-                    <div class="section-title">農場資訊</div>
-                    <form class="form-farm-info">
-                        <div class="form-group">
-                            <!-- 農場名稱 -->
-                            <label for="farm-name">農場名稱</label>
-                            <input type="text" id="farm-name" name="farm-name" class="farm-name">
-                        </div>
-                        <div class="form-group">
-                            <!-- 農場地區 -->
-                            <label for="farm-region">農場地區</label>
-                            <select id="farm-region" name="farm-region" class="farm-region"></select>
-                        </div>
-                        <div class="form-group">
-                            <!-- 種植水果 -->
-                            <label for="fruit-type">種植水果</label>
-                            <input type="text" id="fruit-type" name="fruit-type" class="fruit-type">
-                        </div>
-                        <div class="form-group">
-                            <!-- 商品種類 -->
-                            <label for="product-type">商品種類</label>
-                            <input type="checkbox" id="product-type" name="product-type" class="product-type">
-                        </div>
-                    </form>
-
-                    <!-- 其他 -->
-                    <div class="section-title">其他</div>
-                    <form class="form-other-info">
-                        <div class="form-group">
-                            <!-- 有話要說 -->
-                            <label for="comments">有話要說</label>
-                            <input type="text" id="comments" name="comments">
-                        </div>
-                    </form>
-
-                    <!-- 送出 -->
-                    <div class="form-submit">
-                        <input type="button" value="送出">
-                    </div>
-                </div>
-
-
             </div>
 
         </section>
