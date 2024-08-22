@@ -477,6 +477,32 @@ footer {
     color: var(--primaryO);
 }
 
+.shoppingBanner-tit-ornament-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.shoppingBanner-tit-ornament-box svg {
+
+    &:nth-child(1) {
+        position: absolute;
+        z-index: 2;
+        width: 21%;
+        height: 100%;
+        transform: translateX(-242%) translateY(5%) rotate(-51deg);
+    }
+
+    &:nth-child(2) {
+        position: absolute;
+        z-index: 2;
+        width: 13%;
+        height: 100%;
+        transform: translateX(-178%) translateY(39%) rotate(-37deg) scale(-1);
+    }
+
+}
+
 /* 小農商城-商品選擇 */
 #productList {
     width: 100%;
@@ -549,14 +575,13 @@ footer {
     color: var(--text);
 }
 
-
-
 .search-img {
     position: absolute;
     right: 15px;
     width: 24px;
     height: 24px;
 }
+
 
 /* 小農商城-特色介紹 */
 #features {
@@ -642,7 +667,6 @@ footer {
     color: var(--white);
     text-align: center;
     width: 100%;
-
 }
 
 /* 關於小農-tit */
@@ -670,7 +694,26 @@ footer {
     margin-bottom: .7%;
 }
 
+.features-ornament-box {
+    position: absolute;
+    width: 100%;
+}
 
+.features-ornament-box svg {
+    position: absolute;
+    width: 100%;
+
+    &:nth-child(1) {
+
+        transform: translateX(-44%) translateY(49%) rotate(-15deg);
+    }
+
+    &:nth-child(2) {
+
+        transform: translateX(-6%) translateY(187%) rotate(155deg);
+    }
+
+}
 
 /* 關於小農-內容 */
 .farmer-search-container {
@@ -833,6 +876,11 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 0 2%;
+}
+
+.promotion-item-details1 {
+        position: absolute;
+        transform: translateX(280%) translateY(-80%);
 }
 
 .Opportunity {
