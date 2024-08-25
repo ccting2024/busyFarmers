@@ -123,6 +123,12 @@ address {
     --GenSenRounded-L: 'GenSenRounded TW-L', sans-serif;
     --GenSenRounded-M: 'GenSenRounded TW-M', sans-serif;
     --GenSenRounded-R: 'GenSenRounded TW-R', sans-serif;
+
+    /* 控制滾動視差 */
+    --translateY-1: 50%;
+    --translateY-2: -30%;
+    --translateY-3: 0%;
+
 }
 
 /* 導覽列*/
@@ -454,7 +460,7 @@ footer {
     position: absolute;
     z-index: -5;
     left: 0;
-    transform: translateY(50%);
+    transform: translateY(var(--translateY-1));
     width: 100%;
     height: 100%;
 
@@ -480,6 +486,7 @@ footer {
     display: flex;
     width: 100%;
     height: 100%;
+    transform: translateY(var(--translateY-3));
 }
 
 .ornament-left-box {
@@ -581,6 +588,7 @@ footer {
     margin-left: 3%;
     left: 0;
 }
+
 .ornament-right {
     position: absolute;
 
@@ -594,6 +602,7 @@ footer {
         width: 20%;
         transform: translateX(305%) translateY(68%);
     }
+
     &:nth-child(2) svg {
         width: 34%;
         height: 100%;
@@ -647,12 +656,14 @@ footer {
         width: 30%;
         transform: translateY(132%) translateX(99%);
     }
-    &:nth-child(9) svg{
+
+    &:nth-child(9) svg {
         width: 30%;
         height: 100%;
         transform: translateY(78%) translateX(10%) rotate(-46deg);
     }
-    &:nth-child(9) img:nth-child(3){
+
+    &:nth-child(9) img:nth-child(3) {
         width: 32%;
         height: 100%;
         transform: translateY(-137%) translateX(321%) rotate(65deg);
@@ -664,13 +675,135 @@ footer {
         transform: translateX(29%) translateY(224%);
     }
 }
+
 .mountain-2 {
     position: absolute;
     z-index: -3;
     width: 100%;
     height: 100%;
-    transform: translateY(-30%);
+    transform: translateY(var(--translateY-2));
 }
+
+body.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.prospect {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.prospect-left,
+.prospect-right {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: auto;
+    transition: transform 5s ease;
+}
+
+.prospect-left {
+    transform: translateX(-35%);
+}
+
+.prospect-right {
+    transform: translateX(36%) scaleX(-1);
+}
+
+.play {
+    animation: playprospect-left 5s forwards;
+}
+
+.play-right {
+    animation: playprospect-right 5s forwards;
+}
+
+.play-hero {
+    animation: herologo 5s forwards;
+}
+
+@keyframes playprospect-left {
+    0% {
+        transform: translateX(-35%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-100%) rotate(-30deg);
+    }
+}
+
+@keyframes playprospect-right {
+    0% {
+        transform: translateX(35%) scaleX(-1);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(30deg) scaleX(-1);
+    }
+}
+
+@keyframes herologo {
+    0% {
+        width: 100%;
+        
+    }
+
+    20% {
+        width: 100%;
+
+    }
+
+    48% {
+        width: 25%;
+
+    }
+
+    56% {
+        width: 38%;
+
+    }
+
+    63% {
+        width: 30%;
+    }
+
+}
+
+/* @keyframes herologo {
+    0% {
+        width: 100%;
+    }
+    20%{
+        width: 25%;
+    }
+    28%{
+        width: 38%;
+    }
+    35%{
+        width: 30%;
+    }
+    40%{
+        width: 35%;
+    }
+    42%{
+        width: 30%;
+    }
+    45%{
+        width: 32%;
+    }
+    48%{
+        width: 30%;
+    }
+} */
 
 /* 小農與我們 */
 #farm-details {
@@ -716,7 +849,7 @@ footer {
 .farm-details-content {
     display: flex;
     width: 80%;
-    margin-top: 3% ;
+    margin-top: 3%;
 }
 
 .farm-details-group {
@@ -797,35 +930,41 @@ footer {
     cursor: pointer;
     margin: 3% 0;
 }
-.farm-details-button:hover{
+
+.farm-details-button:hover {
     background-color: var(--white-80);
     padding: 12px 35px;
 }
-.farm-details-ornament{
+
+.farm-details-ornament {
     width: 100%;
     height: 100%;
 }
-.farm-details-ornament img{
+
+.farm-details-ornament img {
     position: absolute;
     bottom: 0;
-    &:nth-child(1){
+
+    &:nth-child(1) {
         left: 0;
         width: 20%;
         transform: translateY(6%);
 
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
         right: 0;
         width: 20%;
         transform: translateY(22%);
     }
 }
+
 /* 最新消息 */
 #news {
     position: relative;
     width: 100%;
     height: 100vh;
-
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -919,47 +1058,55 @@ footer {
     background-color: var(--white-80);
     color: var(--text);
 }
+
 .news-text-btn:hover .farm-details-button-arrow {
     stroke: var(--text);
 }
+
 .news-text-btn div {
     margin-right: 10px;
 }
 
-.news-ornament{
+.news-ornament {
     width: 100%;
     height: 100%;
 }
-.news-ornament svg{
-    position:absolute;
+
+.news-ornament svg {
+    position: absolute;
     z-index: 2;
-    &:nth-child(1){
+
+    &:nth-child(1) {
         width: 50%;
         height: 32%;
         transform: translateX(-10%) translateY(73%) rotate(-50deg);
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
         width: 46%;
         height: 18%;
         transform: translateX(44%) translateY(208%) rotate(10deg);
     }
+
     &:nth-child(3) {
         width: 46%;
         height: 18%;
         transform: translateX(94%) translateY(64%) rotate(-71deg) scaleY(-1);
     }
-    &:nth-child(4){
+
+    &:nth-child(4) {
         width: 39%;
         height: 15%;
         transform: translateX(150%) translateY(359%) rotate(-2deg) scaleX(-1);
     }
 }
+
 /* 合作的小農 */
 #cooperation {
     position: relative;
     width: 100%;
     height: 100vh;
-
+    z-index: 4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -993,16 +1140,19 @@ footer {
     letter-spacing: .2em;
     color: var(--primaryG);
 }
-.cooperation-tit svg:nth-child(1){
+
+.cooperation-tit svg:nth-child(1) {
     position: absolute;
     transform: translateX(-171%) translateY(-226%);
 
 }
-.cooperation-ornament-seeds{
+
+.cooperation-ornament-seeds {
     width: 5%;
     position: absolute;
     transform: translateX(555%) translateY(-818%);
 }
+
 /* 合作的小農按鈕 */
 .cooperationBtn {
     position: absolute;
@@ -1037,26 +1187,30 @@ footer {
     padding: 0px 5px;
 }
 
-.cooperation-ornament-box{
+.cooperation-ornament-box {
     width: 100%;
     height: 100%;
 }
 
-.cooperation-ornament{
+.cooperation-ornament {
     position: absolute;
-    &:nth-child(1){
+
+    &:nth-child(1) {
         transform: translateX(-153%) translateY(-206%);
     }
-    &:nth-child(1) svg{
+
+    &:nth-child(1) svg {
         width: 46%;
         transform: translateX(-5%) translateY(47%) rotate(80deg);
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
         width: 26%;
         height: 100%;
         transform: translateX(224%) translateY(-42%);
     }
 }
+
 @media(max-width:1440px) {
     .farm-details-item figure {
         width: 28%;
@@ -1068,14 +1222,6 @@ footer {
 
     .pineapple {
         margin-left: 3%;
-    }
-
-    .mountain-1 {
-        transform: translateY(61%);
-    }
-
-    .mountain-2 {
-        transform: translateY(-20%);
     }
 
 
