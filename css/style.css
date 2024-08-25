@@ -467,6 +467,8 @@ footer {
     padding: 60px 0px 120px 30px;
     display: flex;
     justify-content: flex-end;
+    
+    
 }
 
 .shoppingBanner-tit-box h1 {
@@ -505,10 +507,7 @@ footer {
 
 }
 
-/* 小農商城-banner（季節商品） */
-
-
-
+/* （季節商品）- 小農商城 - banner */
 .shoppingBanner-tit-box .s-title1 {
     font-family: var(--NotoSans);
     font-weight: 500;
@@ -525,13 +524,57 @@ footer {
     padding-left: 80px;
 }
 
-/* .shoppingBanner-tit-ornament-box .season-banner-spring {
+.shoppingBanner-tit-ornament-box #season-banner-spring {
     position: absolute;
     z-index: 2;
     width: 13%;
     height: 100%;
-    transform: translateX(-100%) translateY(39%) rotate(-37deg) scale(-1);
+    transform: translateX(-140%) translateY(39%) rotate(-37deg) scale(-1);
+}
+
+/* （季節商品）- 小農商城 - 商品選擇 */
+.productList-tit-box .season-productList-tit {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image:url('../images/shopping/productList-btn-1-transparent.svg');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: var(--text);
+    padding: auto;
+    margin-top: 12px;
+    align-self: stretch;
+    justify-content: center;
+
+}
+
+/* .productList-item {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
 } */
+
+.season-productList-item-box figure {
+    height: 35vh;
+
+}
+
+.season-productList-item-box img {
+    width: 250px;
+   
+}
+
+.productList-item-box h3 {
+    margin-top: 20px;
+    font-family: 'GenSenRounded TW-M', 'sans-serif';
+    font-size: clamp(16px, 2vw, 24px);
+    letter-spacing: .2em;
+    color: var(--text);
+}
+
+
 
 
 /* 小農商城-商品選擇 */
