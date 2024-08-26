@@ -1,0 +1,58 @@
+
+@font-face {
+    font-family: 'GenSenRounded TW-M';
+    src: url(../webfonts/GenSenRounded2-M.ttc);
+}
+
+@font-face {
+    font-family: 'GenSenRounded TW-R';
+    src: url(../webfonts/GenSenRounded2-R.ttc);
+}
+
+body {
+    font-family: GenSenRounded TW-M, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f59e42;
+}
+.activity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.activity img {
+    width: 50%;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+.activity:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.activity:nth-child(even) img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.description {
+    flex: 1;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.description h2 {
+    margin-top: 0;
+    color: #f59e42;
+}
