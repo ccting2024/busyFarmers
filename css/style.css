@@ -233,86 +233,76 @@ main {
 footer {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     bottom: 0;
+    overflow-y: hidden;
 
+}
+
+.footer-pre,
+.footer-back {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    filter: var(--shadow);
 }
 
 .footer-pre {
-    position: absolute;
     z-index: 100;
-    bottom: 0;
-    filter: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-back {
-    position: absolute;
     z-index: 99;
-    bottom: 0;
-    filter: var(--shadow);
 }
 
 /* footer 資訊區*/
 #footer-content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: relative;
     z-index: 101;
-
+    transform: translateY(100%);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-
-
     font-family: var(--GenSenRounded-L);
     font-size: 16px;
     letter-spacing: .1em;
+
 }
 
 .footer-content-box {
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.footer-contact {
+.footer-contact,
+.footer-map,
+.copyright {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-bottom: 60px;
+}
+
+.footer-contact {
+    align-items: center;
 }
 
 .footer-map {
-    width: 100%;
-    height: auto;
-
-    display: flex;
     justify-content: space-between;
-
-    margin-bottom: 60px;
-
     font-family: var(--GenSenRounded-R);
     font-size: 24px;
-    letter-spacing: .1em;
-}
-
-.copyright {
-    width: 100%;
-    height: auto;
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
 }
 
 .footer-contact-box {
     display: flex;
     flex-direction: column;
-
 }
 
 .company {
@@ -987,11 +977,19 @@ margin: auto 15px;
     position: relative;
 }
 
-.map-display {
-    position: absolute;
+.map-display-bg{
     width: 100%;
     height: 100%;
     background-color: var(--primaryG);
+    display: flex;
+    align-items: center;
+    border-radius: 36px;
+}
+.map-display {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    
     z-index: 1;
 }
 
@@ -1001,7 +999,7 @@ margin: auto 15px;
 
 .farmer-display {
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-color: var(--primaryO);
 
 }
