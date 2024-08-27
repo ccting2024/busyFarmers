@@ -9,7 +9,7 @@ a {
 }
 
 .cooperation-container {
-    margin: 5em 0;
+    margin: 3em 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
     gap: 5rem;

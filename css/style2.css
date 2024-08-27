@@ -1157,13 +1157,13 @@ body.fixed {
 .cooperationBtn {
     position: absolute;
     z-index: 2;
-    bottom: 0;
+    bottom: 5%;
     display: flex;
     justify-content: center;
     background-color: var(--primaryO);
     border-radius: 45px;
     transition: 0.35s;
-    margin: 50px;
+    margin-bottom: 50px;
     padding: 10px 15px;
 }
 
