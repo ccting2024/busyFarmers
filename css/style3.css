@@ -1,16 +1,5 @@
-
-@font-face {
-    font-family: 'GenSenRounded TW-M';
-    src: url(../webfonts/GenSenRounded2-M.ttc);
-}
-
-@font-face {
-    font-family: 'GenSenRounded TW-R';
-    src: url(../webfonts/GenSenRounded2-R.ttc);
-}
-
 body {
-    font-family: GenSenRounded TW-M, sans-serif;
+    font-family: var(--GenSenRounded-M);
     background-color: #fff;
     color: #333;
     margin: 0;
@@ -26,7 +15,7 @@ body {
     text-align: center;
     font-size: 36px;
     margin-bottom: 20px;
-    color: #f59e42;
+    color: var(--primaryO);
 }
 .activity {
     display: flex;
@@ -47,12 +36,12 @@ body {
 }
 .description {
     flex: 1;
-    background-color: #f3f3f3;
+    background-color: var(--white);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 .description h2 {
     margin-top: 0;
-    color: #f59e42;
+    color: var(--primaryO);
 }

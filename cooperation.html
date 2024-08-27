@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於小農 - 小農好忙</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -49,7 +53,7 @@
                         <form action="">
                             <input type="text" name="productList-search" class="productList-search-input"
                                 id="productList-search-input" placeholder="找果乾、小農、農場、市集">
-                            <div class="search-img"><img src="../images/shopping/Search.svg" alt="點擊搜尋"></div>
+                            <div class="search-img"><img src="./images/shopping/Search.svg" alt="點擊搜尋"></div>
                         </form>
                     </div>
                 </div>
@@ -156,13 +160,17 @@
                 <!-- 顯示畫面 -->
                 <div class="farmer-search-display">
                     <!-- 地圖 -->
-                    <div id="map-display" class="map-display"></div>
-                    <!-- 小農 -->
-                    <div id="farmer-display" class="farmer-display"></div>
+                    <div class="map-display-bg">
+                        <div id="map-display" class="map-display"></div>
+
+
+                        <!-- 小農 -->
+                        <div id="farmer-display" class="farmer-display"></div>
+                    </div>
                 </div>
             </div>
 
-            
+
 
         </section>
 
