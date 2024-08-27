@@ -236,7 +236,6 @@ footer {
     height: 70vh;
     bottom: 0;
     overflow-y: hidden;
-    transform: translateY(30%);
 
 }
 
@@ -1012,7 +1011,6 @@ margin: auto 15px;
 /* 加入我們 */
 #joinUs {
     width: 100%;
-    height: 145vh;
 }
 
 .promotion-sections {
@@ -1236,6 +1234,7 @@ margin: auto 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .form-group-sec input {
@@ -1244,6 +1243,7 @@ margin: auto 15px;
     margin-bottom: 1rem;
     text-align: center;
     padding: 5px 20px;
+    width: 100%;
 }
 
 .gender {
@@ -1283,7 +1283,16 @@ margin: auto 15px;
 
 .product-type-box {
     color: var(--primaryG);
-    padding: 0 px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+.product-type-box input{
+    display: flex;
+    align-items: center;
+    margin: 0 5px 0 0;
 }
 
 .comments {
