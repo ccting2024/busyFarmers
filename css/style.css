@@ -768,7 +768,7 @@ margin: auto 15px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: var(--shadow);
+    /* filter: var(--shadow); */
     z-index: -1;
 }
 
