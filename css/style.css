@@ -442,6 +442,88 @@ footer {
     z-index: -1;
 }
 
+/* 公益理念 */
+/* 公益理念-banner */
+
+#philanthropyBanner {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    display: flex;
+}
+
+#philanthropyBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-image: url('../images/philanthropy/concept-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.philanthropyBanner-tit {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.philanthropyBanner-tit-box {
+    width: 100%;
+    padding: 60px 0px 120px 0px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction:column;
+    align-items: flex-end;
+    padding-right:  50px; ;
+
+}
+
+.philanthropyBanner-tit-box h1 {
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 56px);
+    letter-spacing: .2em;
+    color: var(--white);
+    /* text-align: right; */
+}
+
+.philanthropyBanner-tit-ornament-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.philanthropyBanner-tit-ornament-box svg {
+
+    &:nth-child(1) {
+        position: absolute;
+        z-index: 2;
+        width: 21%;
+        height: 100%;
+        transform: translateX(100%) translateY(-17%) rotate(-118deg);
+    }
+
+    &:nth-child(2) {
+        position: absolute;
+        z-index: 2;
+        width: 13%;
+        height: 100%;
+        transform: translateX(-178%) translateY(39%) rotate(-37deg) scale(-1);
+    }
+
+}
+
+
+
+
 .shoppingBanner-tit {
     display: flex;
     text-align: center;
@@ -493,174 +575,6 @@ footer {
         height: 100%;
         transform: translateX(-178%) translateY(39%) rotate(-37deg) scale(-1);
     }
-
-}
-
-/* 季節商品- 小農商城 - banner */
-.shoppingBanner-tit-box .s-title1 {
-    font-family: var(--NotoSans);
-    font-weight: 500;
-    font-size: clamp(38px, 2vw + 1rem, 56px);
-    letter-spacing: .2em;
-    color: var(--text);
-}
-.shoppingBanner-tit-box .s-title2 {
-    font-family: var(--NotoSans);
-    font-weight: 500;
-    font-size: clamp(38px, 2vw + 1rem, 56px);
-    letter-spacing: .2em;
-    color: var(--text);
-    padding-left: 80px;
-}
-
-.shoppingBanner-tit-ornament-box #season-banner-spring {
-    position: absolute;
-    z-index: 2;
-    width: 13%;
-    height: 100%;
-    transform: translateX(-140%) translateY(39%) rotate(-37deg) scale(-1);
-}
-
-/* 季節商品- 小農商城 - 商品選擇 */
-#season-productList {
-    width: 100%;
-    height: 120vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-#season-productList::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 150%;
-    background-image: url('../images/shopping/mountain-w.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: var(--shadow);
-    z-index: -1;
-    transform: translateY(-5%);
-}
-.productList-tit-box .season-productList-tit {
-    height: 180px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-image:url('../images/shopping/productList-btn-1-transparent.svg');
-    background-size: 75%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: #856a45;
-    padding: auto;
-    margin-top: 12px;
-    align-self: stretch;
-    justify-content: center;
-
-}
-
-.season-productList-item {
-    display: flex;
-    justify-content: space-around;
-    width: 65%;
-    margin: 60px 0;
-} 
-.season-productList-item-box{
-margin: auto 15px;    
-}
-
-.season-productList-item-box figure {
-    height:clamp(180px, 24vw, 250px);
-    width:clamp(180px, 24vw, 250px);
-
-}
-
-.season-productList-btn img {
-    width: 250px;
-    object-fit: cover;
-    height: 100%;
-    border-radius: 20px;
-   
-} 
-.season-productList-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 22px;
-    
-}
-
-.season-productList-text h3 {
-    margin-top: 6px;
-    font-family: 'GenSenRounded TW', 'sans-serif';
-    font-size: clamp(20px, 3vw, 29px);
-    letter-spacing: .12em;
-    color: #856a45;
-    font-weight: 500;
-    transform: translateX(4px);
-}
-.season-productList-text-name h4{
-    font-family: 'GenSenRounded TW', 'sans-serif';
-    font-size: clamp(16px, 2vw, 20px);
-    font-weight: 400;
-    letter-spacing: .1em;
-    line-height:20px;
-    color: var(--text);
-}
-
-.season-productList-text-name h5 {
-    font-family: 'GenSenRounded TW', 'sans-serif';
-    font-size:  clamp(16px, 2vw, 20px);
-    font-weight: 300;
-    letter-spacing: .11em;
-    color: var(--text);
-}
-.season-productList-text-name{
-
-    display: flex;
-    flex-direction:column;
-    justify-content:space-between;
-
-}
-
-/* 季節商品- 小農商城 - 特色介紹 */
-
- #season-features {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateY(24%);
-
-}
-
-#season-features::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 150%;
-    background-image: url('../images/shopping/mountain-g-nomal.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: var(--shadow);
-    z-index: -1;
-} 
-
-/* 季節商品- 小農商城 - footer */
-
-.season-footer {
-    transform: translateY(42%);
 
 }
 
@@ -829,6 +743,177 @@ margin: auto 15px;
     text-align: center;
     width: 100%;
 }
+
+/*「 季節商品 」*/
+/* 季節商品- 小農商城 - banner */
+.shoppingBanner-tit-box .s-title1 {
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 56px);
+    letter-spacing: .2em;
+    color: var(--text);
+}
+.shoppingBanner-tit-box .s-title2 {
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 56px);
+    letter-spacing: .2em;
+    color: var(--text);
+    padding-left: 80px;
+}
+
+.shoppingBanner-tit-ornament-box #season-banner-spring {
+    position: absolute;
+    z-index: 2;
+    width: 13%;
+    height: 100%;
+    transform: translateX(-140%) translateY(39%) rotate(-37deg) scale(-1);
+}
+
+/* 季節商品- 小農商城 - 商品選擇 */
+#season-productList {
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#season-productList::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('../images/shopping/mountain-w.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: var(--shadow);
+    z-index: -1;
+    transform: translateY(-5%);
+}
+.productList-tit-box .season-productList-tit {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image:url('../images/shopping/productList-btn-1-transparent.svg');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #856a45;
+    padding: auto;
+    margin-top: 12px;
+    align-self: stretch;
+    justify-content: center;
+
+}
+
+.season-productList-item {
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+    margin: 60px 0;
+} 
+.season-productList-item-box{
+margin: auto 15px;    
+}
+
+.season-productList-item-box figure {
+    height:clamp(180px, 24vw, 250px);
+    width:clamp(180px, 24vw, 250px);
+
+}
+
+.season-productList-btn img {
+    width: 250px;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 20px;
+   
+} 
+.season-productList-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 22px;
+    
+}
+
+.season-productList-text h3 {
+    margin-top: 6px;
+    font-family: 'GenSenRounded TW', 'sans-serif';
+    font-size: clamp(20px, 3vw, 29px);
+    letter-spacing: .12em;
+    color: #856a45;
+    font-weight: 500;
+    transform: translateX(4px);
+}
+.season-productList-text-name h4{
+    font-family: 'GenSenRounded TW', 'sans-serif';
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height:20px;
+    color: var(--text);
+}
+
+.season-productList-text-name h5 {
+    font-family: 'GenSenRounded TW', 'sans-serif';
+    font-size:  clamp(16px, 2vw, 20px);
+    font-weight: 300;
+    letter-spacing: .11em;
+    color: var(--text);
+}
+.season-productList-text-name{
+
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+}
+
+/* 季節商品- 小農商城 - 特色介紹 */
+
+#season-features {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(24%);
+
+}
+
+#season-features::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('../images/shopping/mountain-g-nomal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: var(--shadow);
+    z-index: -1;
+} 
+
+/* 季節商品- 小農商城 - footer */
+
+.season-footer {
+    transform: translateY(42%);
+
+}
+
+
 
 /* 關於小農-tit */
 #farmer-search {
