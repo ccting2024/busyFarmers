@@ -1,0 +1,134 @@
+.cart-title {
+    display: flex;
+    justify-content: center;
+}
+
+#product-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-table {
+    table-layout: fixed;
+    width: 80%;
+    border-spacing: 0 2rem;
+}
+
+.product-header,
+.product-row {
+    display: table-row;
+    vertical-align: middle;
+}
+
+.product-header {
+    width: 100%;
+    position: relative;
+}
+
+.product-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 100%;
+    border-bottom: 3px solid var(--primaryG);
+}
+
+.product-header-cell {
+    width: 20%;
+    text-align: center;
+}
+
+.product-header-cell:nth-child(1) {
+    width: 10%;
+}
+
+.product-header-cell:nth-child(2) {
+    width: 30%;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.product-header-cell:nth-child(6) {
+    width: 10%;
+}
+
+.product-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.product-cell:nth-child(2) {
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.product-cell:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}
+
+.product-cell:nth-child(6) {
+    width: 10%;
+    cursor: pointer;
+}
+
+.quantity-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primaryG);
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 2rem;
+    text-align: center;
+    margin: 0 2%;
+}
+
+.product-cell img {
+    border-radius: 16px;
+}
+
+#gift-section,
+#extra-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gift-section .cart-title,
+#extra-section .cart-title {
+    position: relative;
+    width: 80%;
+}
+
+#gift-section .cart-title::before,
+#extra-section .cart-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1rem;
+    width: 100%;
+    border-bottom: 3px solid var(--primaryG);
+}
+
+.gift-options {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+.extra-product{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
