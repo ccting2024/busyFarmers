@@ -684,71 +684,10 @@ footer {
     transform: translateY(var(--translateY-2));
 }
 
-body.fixed {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-}
 
-.prospect {
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.prospect-left,
-.prospect-right {
-    position: absolute;
-    bottom: -100%;
-    width: 100%;
-    height: auto;
-    transition: transform 5s ease;
-}
-
-.prospect-left {
-    transform: translateX(-35%);
-}
-
-.prospect-right {
-    transform: translateX(36%) scaleX(-1);
-}
-
-.play {
-    animation: playprospect-left 5s forwards;
-}
-
-.play-right {
-    animation: playprospect-right 5s forwards;
-}
 
 .play-hero {
     animation: herologo 5s forwards;
-}
-
-@keyframes playprospect-left {
-    0% {
-        transform: translateX(-35%) rotate(0deg);
-    }
-
-    100% {
-        transform: translateX(-100%) rotate(-30deg);
-    }
-}
-
-@keyframes playprospect-right {
-    0% {
-        transform: translateX(35%) scaleX(-1);
-    }
-
-    100% {
-        transform: translateX(100%) rotate(30deg) scaleX(-1);
-    }
 }
 
 @keyframes herologo {

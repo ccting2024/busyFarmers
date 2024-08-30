@@ -63,36 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // 開場動畫
-    const prospectLeft = document.querySelector('.prospect-left');
-    const prospectRight = document.querySelector('.prospect-right');
-    const heroLogo = document.querySelector('.heroLogo img');
-    const ANIMATION_PLAYED_KEY = 'animationPlayed';
-    const prospect = document.querySelector('.prospect');
 
-    function startAnimation() {
-        // 固定背景
-        document.body.classList.add('fixed');
-        // 加入動畫
-        prospectLeft.classList.add('play');
-        prospectRight.classList.add('play-right');
-        heroLogo.classList.add('play-hero');
-
-        // 移除固定
-        setTimeout(() => {
-            document.body.classList.remove('fixed');
-        }, 5000); // 動畫持續時間 (5秒)
-    }
-
-    // 檢查是否已經播放過動畫
-    if (!sessionStorage.getItem(ANIMATION_PLAYED_KEY)) {
-        prospect.classList.remove('hidden');
-        // 如果尚未播放過動畫，則開始動畫
-        startAnimation();
-
-        // 標記為動畫已經播放過
-        sessionStorage.setItem(ANIMATION_PLAYED_KEY, 'true');
-    }
 });
 
 
@@ -136,7 +107,7 @@ if (mapSearchBtn && farmerSearchBtn) {
 
     function initializeMap() {
         if (!map) {
-            map = L.map('map-display').setView([24.9457, 121.3576 ], 13); // 設置中心為台北市
+            map = L.map('map-display').setView([24.9457, 121.3576], 13); // 設置中心為台北市
 
             // 添加 OpenStreetMap 圖層
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -161,10 +132,10 @@ if (mapSearchBtn && farmerSearchBtn) {
 
             // 添加多個標記到標記組
             var locations = [
-                [24.9457, 121.3576 ],/* 柑橘、蘋果、葡萄 */
+                [24.9457, 121.3576],/* 柑橘、蘋果、葡萄 */
                 [23.7681, 120.9674],/* 荔枝、香蕉 */
                 [22.8851, 120.5630],/* 芒果、木瓜、龍眼 */
-                [23.982002, 121.597182],/* 釋迦、番荔枝、柚子 */ 
+                [23.982002, 121.597182],/* 釋迦、番荔枝、柚子 */
                 [23.579977, 119.604850]/* 柑橘、葡萄柚、香蕉 */
 
 
