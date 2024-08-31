@@ -506,22 +506,72 @@ footer {
     &:nth-child(1) {
         position: absolute;
         z-index: 2;
-        width: 21%;
+        width: 13%;
         height: 100%;
-        transform: translateX(100%) translateY(-17%) rotate(-118deg);
+        transform: translateX(85%) translateY(-16%) rotate(-95deg);
     }
 
     &:nth-child(2) {
         position: absolute;
         z-index: 2;
-        width: 13%;
+        width: 10%;
         height: 100%;
-        transform: translateX(-178%) translateY(39%) rotate(-37deg) scale(-1);
+        transform: translateX(74% ) translateY(24%) rotate(76deg) scale(-1);
     }
+    
+    &:nth-child(3) {
+        position: absolute;
+        z-index: 2;
+        width: 10%;
+        height: 100%;
+        transform: translateX(280%) translateY(43%) rotate(32deg) scale(-1);
+    }
+}
+
+/* 公益理念-歷年成果 */
+#philanthropy-productList {
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 
 }
 
+#philanthropy-productList::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('../images/philanthropy/mountain-w-XL.png');
+    background-size: cover;
+    /* background-position: center; 上方會被切掉*/
+    background-repeat: no-repeat;
+    filter: var(--shadow);
+    z-index: -1;
+    transform: translateY(-5%);
+}
 
+.philanthropy-tit-box .season-productList-tit {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image:url('../images/shopping/productList-btn-1-transparent.svg');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #856a45;
+    padding: auto;
+    margin-top: 12px;
+    align-self: stretch;
+    justify-content: center;
+
+}
 
 
 .shoppingBanner-tit {
@@ -791,7 +841,6 @@ footer {
     height: 150%;
     background-image: url('../images/shopping/mountain-w.png');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     filter: var(--shadow);
     z-index: -1;
