@@ -3,11 +3,38 @@ let greenTopbar = document.querySelector('.greenTopbar');
 document.addEventListener('DOMContentLoaded', function () {
     let anchor = document.getElementById('anchor');
 
-
-    // Initialize basicScroll instances
     const mountain1 = document.querySelector('.mountain-1');
     const mountain2 = document.querySelector('.mountain-2');
     const ornament = document.querySelector('.ornament');
+
+
+
+    // Handle scroll events
+    window.addEventListener('scroll', function () {
+        let scrollPosition = window.scrollY;
+        let AnchorTop = anchor.getBoundingClientRect().top + scrollPosition;
+
+        // Toggle topbars
+        if (scrollPosition >= AnchorTop) {
+            witheTopbar.classList.add('hidden');
+            greenTopbar.classList.remove('hidden');
+        } else {
+            witheTopbar.classList.remove('hidden');
+            greenTopbar.classList.add('hidden');
+        }
+    });
+
+    const cartHeader = document.querySelector('.cart-header');
+    const floatingCart = document.getElementById('floating-cart');
+
+    cartHeader.addEventListener('click', function () {
+        console.log('click');
+        if (floatingCart.classList.contains('open')) {
+            floatingCart.classList.remove('open');
+        } else {
+            floatingCart.classList.add('open');
+        }
+    });
 
     const scrollEffectMountain1 = basicScroll.create({
         elem: mountain1,
@@ -47,23 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }).start();
-
-    // Handle scroll events
-    window.addEventListener('scroll', function () {
-        let scrollPosition = window.scrollY;
-        let AnchorTop = anchor.getBoundingClientRect().top + scrollPosition;
-
-        // Toggle topbars
-        if (scrollPosition >= AnchorTop) {
-            witheTopbar.classList.add('hidden');
-            greenTopbar.classList.remove('hidden');
-        } else {
-            witheTopbar.classList.remove('hidden');
-            greenTopbar.classList.add('hidden');
-        }
-    });
-
-
 });
 
 
