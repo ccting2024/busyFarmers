@@ -515,7 +515,7 @@ footer {
     &:nth-child(1) {
         position: absolute;
         z-index: 2;
-        width: 15%;
+        width: 14%;
         height: 15%;
         transform: translateX(430%) translateY(100%);
     }
@@ -540,11 +540,11 @@ footer {
 /* 公益理念-歷年成果 */
 #philanthropy-productList {
     width: 100%;
-    height: 120vh;
+    height: 130vh;
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between; /* 頭尾貼齊＋均分 */
 
 }
@@ -592,7 +592,7 @@ footer {
 .philanthropy-tit-box h3 {
     font-family: var(--NotoSans);
     font-weight: 500;
-    font-size: clamp(38px, 3vw + 1rem, 56px);
+    font-size:  clamp(38px, 2vw + 1rem, 40px);
     letter-spacing: .2em;
 }
 .helpFarmers {
@@ -636,7 +636,7 @@ justify-content: center;
     justify-content: center;
     text-align: center;
     font-family: var(--NotoSans);
-    font-size: clamp(16px, 2vw + 1rem, 22px);
+    font-size: clamp(16px, 2vw + 1rem, 20px);
     font-weight:400;
     color: #856a45;
     line-height: 1;
@@ -668,9 +668,107 @@ justify-content: center;
 margin: 70px auto;
 font-family: var(--GenSenRounded-l);
 color: #856a45;
-line-height: 1.25em;
-letter-spacing: .15em;
+line-height: 2em;
+letter-spacing: .16em;
 }
+/* 公益理念-歷年成果-社會責任 */
+#responsibility {
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 10px;
+}
+
+.responsibility-contact {
+    width: 40%;
+    margin-right: 6%;
+}
+
+.responsibility-contact-titBox figure {
+    width: 13%;
+    
+}
+.responsibility-contact-titBox{
+    display: flex;
+    margin: 130px 0 20px 0;
+    align-items: center;
+    /* margin-left:  30px; */
+
+}
+
+.responsibility-contact-titBox h3 {
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size:  clamp(38px, 2vw + 1rem, 40px);
+    letter-spacing: .2em;
+    color: var(--primaryG);
+}
+
+.responsibility-contact p {
+    margin-left: 13.5%;
+    display: flex;
+    font-family: var(--GenSenRounded-L);
+    color:var(--text);
+    line-height: 1.6;
+    letter-spacing: .16em;
+    font-size: clamp(16px, 2vw + 1rem, 20px);
+}
+
+
+#responsibility .report {
+    list-style-type: none;/* 使li的黑點消失 */
+    margin-left: 13.5%;
+    display: block;
+}
+.responsibility-contact .li {
+    display: flex;
+
+}
+
+.responsibility-contact .year {
+
+    margin-left: 0;
+    padding: 1px 40px ;
+    font-family: var(--GenSenRounded-L);
+    color:var(--white);
+    line-height: 1.6;
+    letter-spacing: .16em;
+    font-size: 10px;
+    background-color: var(--primaryG);
+    border-radius: 99px;
+}
+.responsibility-contact a {
+    font-family: var(--GenSenRounded-L);
+    color:var(--primaryG);
+    line-height: 1.6;
+    letter-spacing: .16em;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.responsibility-photo {
+    width: 34%;
+    background-image:url(../images/philanthropy/concept-score.png);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.responsibility-photo h3{
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size:  clamp(38px, 2vw + 1rem, 40px);
+    letter-spacing: .2em;
+    color: var(--text);
+}
+.responsibility-photo b {
+color: var(--primaryO);
+font-family: var(--NotoSans);
+font-weight: 500;
+}
+.responsibility-photo img{
+    width: 30%;
+    height:auto;
+}
+
+
 
 
 .shoppingBanner-tit {
