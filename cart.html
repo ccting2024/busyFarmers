@@ -76,7 +76,20 @@
 
 
     <main>
-        <div class="progress-bar"></div>
+        <section id="progressBar-box">
+            <div class="progressBar-bg">
+                <div class="progressBar"></div>
+            </div>
+            <div class="progressBar-text-box">
+                <div class="progressBar-textbox">
+                    <div class="progressBar-text">01商品確認</div>
+                    <div class="progressBar-text">02填寫資料</div>
+                    <div class="progressBar-text">03完成購買</div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- 商品區 -->
         <section id="product-section">
             <table class="product-table">
@@ -186,9 +199,32 @@
                 </div>
             </div>
             <div class="gift-options">
-                <div class="gift-option">禮物選項1</div>
-                <div class="gift-option">禮物選項2</div>
-                <div class="gift-option">禮物選項3</div>
+                <div class="gift-option">
+                    <div class="gift-option-Surrounding">
+                        <div class="gift-option-Surrounding-btn"><span>加入<br>購物車</span></div>
+                        <figure><img src="./images/cart/giftCard.jpeg" alt="暖心小卡"></figure>
+                    </div>
+                    <div>
+                        <div class="gift-option-text">送禮首選 / 暖心小卡</div>
+                        <div class="gift-option-text">Heart-warming Card</div>
+                        <div class="gift-option-text">NT.20</div>
+                    </div>
+                </div>
+                <div class="gift-option">
+                    <div class="gift-option-Surrounding">
+                        <div class="gift-option-Surrounding-btn"><span>加入<br>購物車</span></div>
+                        <figure><img src="./images/cart/giftBag.jpeg" alt="精美提袋"></figure>
+                    </div>
+                    <div>
+                        <div class="gift-option-text">送禮首選 / 精美提袋</div>
+                        <div class="gift-option-text">Exquisite bag</div>
+                        <div class="gift-option-text">NT.10</div>
+                    </div>
+                </div>
+                <div class="gift-option content">
+                    <label for="card-content"></label>
+                    <input type="text" id="card-content" class="card-content" name="card-content" placeholder="暖心小卡內容">
+                </div>
             </div>
         </section>
 
@@ -227,27 +263,136 @@
                     </div>
                 </div>
             </div>
+            <div class="extra-product-tip">再消費<span>NT.701</span>免運費</div>
             <div class="extra-product">
-                <div>加購商品1</div>
-                <div>加購商品2</div>
-                <div>加購商品3</div>
-                <div>加購商品4</div>
-                <div>加購商品5</div>
+                <a href="#" class="gift-option">
+                    <div class="gift-option-Surrounding">
+                        <div class="gift-option-Surrounding-btn"><span>加入<br>購物車</span></div>
+                        <figure><img src="./images/cart/barbara-chowaniec-zG_Mm1XS25I-unsplash.jpg" alt="甜蜜紫漾">
+                        </figure>
+                    </div>
+                    <div>
+                        <h2 class="gift-option-text">最新商品 / 甜蜜紫漾</h2>
+                        <h2 class="gift-option-text">Purple Bliss</h2>
+                        <div class="gift-option-text">NT.280</div>
+                        <div class="gift-option-text">NT.399</div>
+                    </div>
+                </a>
+                <a href="#" class="gift-option">
+                    <div class="gift-option-Surrounding">
+                        <div class="gift-option-Surrounding-btn"><span>加入<br>購物車</span></div>
+                        <figure><img src="./images/cart/barbara-chowaniec-zG_Mm1XS25I-unsplash.jpg" alt="甜蜜紫漾">
+                        </figure>
+                    </div>
+                    <div>
+                        <h2 class="gift-option-text">最新商品 / 甜蜜紫漾</h2>
+                        <h2 class="gift-option-text">Purple Bliss</h2>
+                        <div class="gift-option-text">NT.280</div>
+                        <div class="gift-option-text">NT.399</div>
+                    </div>
+                </a>
+                <a href="#" class="gift-option">
+                    <div class="gift-option-Surrounding">
+                        <div class="gift-option-Surrounding-btn"><span>加入<br>購物車</span></div>
+                        <figure><img src="./images/cart/barbara-chowaniec-zG_Mm1XS25I-unsplash.jpg" alt="甜蜜紫漾">
+                        </figure>
+                    </div>
+                    <div>
+                        <h2 class="gift-option-text">最新商品 / 甜蜜紫漾</h2>
+                        <h2 class="gift-option-text">Purple Bliss</h2>
+                        <div class="gift-option-text">NT.280</div>
+                        <div class="gift-option-text">NT.399</div>
+                    </div>
+                </a>
+                <a href="#" class="gift-option">
+                    <div class="gift-option-Surrounding">
+                        <div class="gift-option-Surrounding-btn"><span>加入<br>購物車</span></div>
+                        <figure><img src="./images/cart/barbara-chowaniec-zG_Mm1XS25I-unsplash.jpg" alt="甜蜜紫漾">
+                        </figure>
+                    </div>
+                    <div>
+                        <h2 class="gift-option-text">最新商品 / 甜蜜紫漾</h2>
+                        <h2 class="gift-option-text">Purple Bliss</h2>
+                        <div class="gift-option-text">NT.280</div>
+                        <div class="gift-option-text">NT.399</div>
+                    </div>
+                </a>
+                <a href="#" class="gift-option">
+                    <div class="gift-option-Surrounding">
+                        <div class="gift-option-Surrounding-btn"><span>加入<br>購物車</span></div>
+                        <figure><img src="./images/cart/barbara-chowaniec-zG_Mm1XS25I-unsplash.jpg" alt="甜蜜紫漾">
+                        </figure>
+                    </div>
+                    <div>
+                        <h2 class="gift-option-text">最新商品 / 甜蜜紫漾</h2>
+                        <h2 class="gift-option-text">Purple Bliss</h2>
+                        <div class="gift-option-text">NT.280</div>
+                        <div class="gift-option-text">NT.399</div>
+                    </div>
+                </a>
             </div>
         </section>
 
         <!-- 提醒區 -->
         <section id="reminder-section">
-            <div class="reminder-block">
-                <div class="reminder-title">提醒標題1</div>
-                <div class="reminder-content">提醒內容1</div>
+            <div class="reminder-block-box">
+                <div class="reminder-block">
+                    <h4>溫馨提醒</h4>
+                    <ul>
+                        <li>*下單前請再次確認購買明細及配送資訊</li>
+                        <li>(訂單成立後無法修改訂單內容)</li>
+                    </ul>
+                    <h4>*如欲取消訂單</h4>
+                    <ul>
+                        <li>請至會員中心--訂單狀態--點選"取消訂單"</li>
+                        <li>(訂單狀態若進入出貨流程，則無法取消訂單)</li>
+                    </ul>
+                    <h4>*請提防詐騙</h4>
+                    <p>小農好忙不會主動在電話中要求您至ATM操作匯款，或提供任何金融資訊。
+                </div>
+                <div class="reminder-block">
+                    <label for="discount">折扣碼</label>
+                    <input type="text" id="discount" class="discount" name="discount">
+                    <input type="button" value="使用">
+                </div>
             </div>
-            <div class="reminder-block">
-                <div class="reminder-title">提醒標題2</div>
-                <div class="reminder-content">提醒內容2</div>
-            </div>
-            <div class="general-reminder">其他提醒信息</div>
         </section>
+
+        <!-- 結帳台 -->
+        <section id="checkout-summary">
+            <table class="summary-table">
+                <tbody>
+                    <tr class="summary-row">
+                        <!-- 件數 -->
+                        <td class="item-count-cell">共1項</td>
+                        <!-- 產品金額 -->
+                        <td class="product-total-cell">產品金額</td>
+                        <td><span class="amount">NT.299</span></td>
+                    </tr>
+
+                    <tr class="summary-row">
+                        <!-- 免運條件 -->
+                        <td class="free-shipping-cell">消費滿 $1000 免運費，未滿則酌收50元運費。</td>
+                        <!-- 運費小計 -->
+                        <td class="shipping-total-cell">運費小計</td>
+                        <td><span class="amount">NT.50</span></td>
+                    </tr>
+                    <!-- 總計 -->
+                    <tr class="grand-total-row">
+                        <td class="grand-total-cell">總計</td>
+                        <td><span id="total-amount" class="total-amount">NT.349</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 按鈕 -->
+        <div class="button-group">
+            <div class="button-group-box">
+                <a href="./shopping.html" class="button continue-shopping">繼續購物</a>
+                <a href="./checkout .html" class="button nextStep">下一步</a>
+            </div>
+        </div>
 
 
         <footer>
