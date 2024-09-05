@@ -10,12 +10,14 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    
 }
 .title {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: var(--primaryO);
+    padding: 10px;
 }
 .activity {
     display: flex;
@@ -27,6 +29,11 @@ body {
     border-radius: 25px;
     margin-right: 20px;
 }
+.description h3,
+.description p
+{
+    padding-left:40px ;
+}
 .activity:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -36,16 +43,46 @@ body {
 }
 .description {
     flex: 1;
-    background-color: var(--white);
+    display: block;
+    /* background-color: var(--white); */
     border-radius: 15px;
-    padding: 20px;
+    padding: 50px;
     box-shadow: var(--shadow);
 }
+/* 文字陰影 */
+.description {
+    position: relative;
+    display: inline-block;
+    /* font-size: 24px; */
+    color: black;
+    background-image: url('../images/activity/shadow-1.png'); /* 替換為你的圖片路徑 */
+    /* background-size: contain; */
+    background-size: 50% ;
+    background-repeat: no-repeat;
+    padding: 60px 0px 60px 100px; /* 根據圖片大小調整 */
+    background-position: 30% center;
+    overflow: visible;
+}
+.description p{
+display: block;
+    width: 50%;
+    font-family: var(--GenSenRounded-R);
+    /* font-size: 20px; */
+    letter-spacing: .15rem;
+    /* line-height: 3rem; */
+}
+
 .description h2 {
-    margin-top: 0;
+    margin-top: 10px;
     color: var(--primaryO);
+    font-size: 25px;
+    letter-spacing: .25rem;
 }
 /* 針對圖片元素的 CSS */
 .activity img {
     filter: drop-shadow(15px 15px 2px rgba(251, 173, 30, 0.697));
 }
+
+.contact-titBox {
+    position: relative;
+    top: -40px;}
