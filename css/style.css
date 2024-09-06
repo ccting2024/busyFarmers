@@ -452,480 +452,6 @@ footer {
     z-index: -1;
 }
 
-/* 公益理念 */
-/* 公益理念-banner */
-
-#philanthropyBanner {
-    width: 100%;
-    height: 70vh;
-    position: relative;
-    display: flex;
-}
-
-#philanthropyBanner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 140%;
-    background-image: url('../images/philanthropy/concept-banner.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
-.philanthropyBanner-tit {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.philanthropyBanner-tit-box {
-    width: 100%;
-    padding: 60px 50px 130px 0px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: flex-end;
-
-}
-
-.philanthropyBanner-tit-box h1 {
-    font-family: var(--NotoSans);
-    font-weight: 500;
-    font-size: clamp(38px, 2vw + 1rem, 56px);
-    letter-spacing: .2em;
-    color: var(--white);
-    /* text-align: right; */
-}
-
-.philanthropyBanner-tit-ornament-box {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.philanthropyBanner-tit-ornament-box figure {
-
-    &:nth-child(1) {
-        position: absolute;
-        z-index: 2;
-        width: 14%;
-        height: 15%;
-        transform: translateX(430%) translateY(100%);
-    }
-
-    &:nth-child(2) {
-        position: absolute;
-        z-index: 2;
-        width: 12%;
-        height: 14%;
-        transform: translateX(470%) translateY(400%);
-    }
-
-    &:nth-child(3) {
-        position: absolute;
-        z-index: 2;
-        width: 10%;
-        height: 10%;
-        transform: translateX(830%) translateY(850%);
-    }
-}
-
-/* 公益理念-歷年成果 */
-#philanthropy-productList {
-    width: 100%;
-    /* height: 130vh; */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: space-between;
-    /* 頭尾貼齊＋均分 */
-
-}
-
-#philanthropy-productList::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 150%;
-    background-image: url('../images/philanthropy/mountain-w-XL.png');
-    background-size: cover;
-    /* background-position: center; 上方會被切掉*/
-    background-repeat: no-repeat;
-    filter: var(--shadow);
-    z-index: -1;
-    transform: translateY(-5%);
-}
-
-#philanthropy-productList .productList-tit {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    /* 靠左對齊 */
-    width: 100%;
-}
-
-.philanthropy-tit-box {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-right: 28%;
-}
-
-.philanthropy-tit-box .season-productList-tit {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-size: 75%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: var(--text);
-    padding-left: 0px;
-    align-self: stretch;
-    justify-content: center;
-}
-
-.philanthropy-tit-box h3 {
-    font-family: var(--NotoSans);
-    font-weight: 500;
-    font-size: clamp(38px, 2vw + 1rem, 40px);
-    letter-spacing: .2em;
-}
-
-.helpFarmers {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.helpFarmers h6 {
-    text-align: center;
-    font-family: var(--GenSenRounded-R);
-    font-size: clamp(24px, 2.5vw + 1rem, 32px);
-    letter-spacing: .15em;
-    padding-top: 100px;
-    color: #856a45;
-}
-
-.helpFarmers .philanthropy-list {
-    display: flex;
-    justify-content: center;
-}
-
-.helpFarmers li {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-right: 4%;
-}
-
-.helpFarmers li h4 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: var(--NotoSans);
-    font-size: clamp(100px, 10vw + 1rem, 136px);
-    letter-spacing: -.03em;
-    font-weight: 500;
-    padding-top: 90px;
-    color: var(--primaryO);
-    line-height: .9;
-}
-
-.helpFarmers li p {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: var(--NotoSans);
-    font-size: clamp(16px, 2vw + 1rem, 20px);
-    font-weight: 400;
-    color: #856a45;
-    line-height: 1;
-    padding-right: 6px;
-}
-
-.helpFarmers li h3 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: var(--NotoSans);
-    font-size: clamp(30px, 2.8vw + 1rem, 40px);
-    letter-spacing: .2em;
-    font-weight: 400;
-    color: #856a45;
-    line-height: 1;
-}
-
-.philanthropy-list-right-top {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 0 30px 10px;
-}
-
-.philanthropy-list-right-botton {
-    display: flex;
-    align-items: flex-end;
-}
-
-.helpFarmers .contact {
-    margin: 70px auto;
-    font-family: var(--GenSenRounded-l);
-    color: #856a45;
-    line-height: 2em;
-    letter-spacing: .16em;
-}
-
-/* 公益理念-歷年成果-社會責任 */
-#responsibility {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 10px;
-}
-
-.responsibility-contact {
-    width: 40%;
-    margin-right: 6%;
-}
-
-/* .contact-titBox figure {
-    width: 13%;
-} */
-.contact-titBox {
-    display: flex;
-    margin: 130px 0 20px 0;
-    align-items: center;
-}
-
-.contact-titBox h3 {
-    font-family: var(--NotoSans);
-    font-weight: 500;
-    font-size: clamp(38px, 2vw + 1rem, 40px);
-    letter-spacing: .2em;
-    color: var(--primaryG);
-}
-
-.responsibility-contact p {
-    margin-left: 13.5%;
-    display: flex;
-    font-family: var(--GenSenRounded-L);
-    color: var(--text);
-    line-height: 1.6;
-    letter-spacing: .16em;
-    font-size: clamp(16px, 2vw + 1rem, 20px);
-}
-
-
-#responsibility .report {
-    list-style-type: none;
-    /* 使li的黑點消失 */
-    margin-left: 13.5%;
-    display: block;
-}
-
-.responsibility-contact .li {
-    display: flex;
-
-}
-
-.responsibility-contact .year {
-
-    margin-left: 0;
-    padding: 1px 40px;
-    font-family: var(--GenSenRounded-L);
-    color: var(--white);
-    line-height: 1.6;
-    letter-spacing: .16em;
-    font-size: 10px;
-    background-color: var(--primaryG);
-    border-radius: 99px;
-}
-
-.responsibility-contact a {
-    font-family: var(--GenSenRounded-L);
-    color: var(--primaryG);
-    line-height: 1.6;
-    letter-spacing: .16em;
-    font-size: 12px;
-    text-decoration: underline;
-}
-
-.responsibility-photo {
-    width: 34%;
-    background-image: url('../images/philanthropy/concept-score.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.responsibility-photo h3 {
-    font-family: var(--NotoSans);
-    font-weight: 500;
-    font-size: clamp(38px, 2vw + 1rem, 40px);
-    letter-spacing: .2em;
-    color: var(--text);
-}
-
-.responsibility-photo b {
-    color: var(--primaryO);
-    font-family: var(--NotoSans);
-    font-weight: 500;
-}
-
-.responsibility-photo img {
-    width: 30%;
-    height: auto;
-}
-
-.responsibility-photo figure {
-
-    &:nth-child(2) {
-        transform: translateX(80%) translateY(-80%) rotate(15deg);
-    }
-    &:nth-child(3) {
-        transform: translateX(-15%) translateY(-70%);
-    }
-}
-
-/* 公益理念-理念願景 */
-#vision {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
-
-#vision::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 150%;
-    background-image: url('../images/philanthropy/mountain-y.png');
-    background-size: cover;
-    /* background-position: center; 上方會被切掉*/
-    background-repeat: no-repeat;
-    filter: var(--shadow);
-    z-index: -1;
-    transform: translateY(5%);
-}
-
-.vision-title-box {
-    display: flex;
-    align-items: flex-end;
-    width: 90%;
-}
-
-#vision .contact-titBox {
-    width: 83%;
-    margin: 100px 0px 0px 0px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-}
-
-#vision .introduction {
-    width: 88%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-}
-
-#vision .introduction p {
-    font-family: var(--GenSenRounded-R);
-    color: var(--text);
-    line-height: 1.6;
-    letter-spacing: .16em;
-    font-size: clamp(26px, 1.8vw + 1rem, 28px);
-}
-
-#vision .introduction b {
-    font-family: var(--GenSenRounded-R);
-    color: var(--primaryO);
-    font-weight: 300;
-}
-
-#vision .introduction img {
-    transform: rotate(10deg);
-}
-
-#vision .card {
-    display: flex;
-    width: 70%;
-}
-
-#vision li {
-    position: relative;
-    justify-content: center;
-    width: 250px;
-    height: 224px;
-    border-radius: 48px;
-    margin: 0 5%;
-
-
-    &:nth-child(1) {
-        background-color: var(--primaryG);
-    }
-
-    &:nth-child(2) {
-        background-color: var(--primaryO);
-    }
-
-    &:nth-child(3) {
-        background-color: #856a45;
-    }
-}
-
-#vision .card .card-top {
-    height: 94px;
-    padding-top: 27px;
-    position: relative;
-    /* margin: 0 22px; */
-
-
-}
-
-#vision .card .card-top h4 {
-    font-size: 28px;
-    letter-spacing: .16em;
-    font-family: var(--GenSenRounded-R);
-    text-align: center;
-    color: var(--white);
-}
-
-#vision .card .card-introduction {
-    padding-bottom: 6px;
-    font-size: 16px;
-    font-family: var(--GenSenRounded-R);
-    text-align: center;
-    margin: 0 22px;
-    letter-spacing: .12em;
-    border-bottom: 3px solid var(--lightGreen);
-    color: var(--white);
-}
-
-#vision .card .item {
-    margin: 24px;
-    line-height: 1.6;
-    letter-spacing: .12em;
-    color: var(--white);
-}
-
 
 
 .shoppingBanner-tit {
@@ -1323,7 +849,480 @@ footer {
 
 .season-footer {
     transform: translateY(42%);
+}
 
+/* 公益理念 */
+/* 公益理念-banner */
+
+#philanthropyBanner {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    display: flex;
+}
+
+#philanthropyBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-image: url('../images/philanthropy/concept-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.philanthropyBanner-tit {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.philanthropyBanner-tit-box {
+    width: 100%;
+    padding: 60px 50px 130px 0px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.philanthropyBanner-tit-box h1 {
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 56px);
+    letter-spacing: .2em;
+    color: var(--white);
+    /* text-align: right; */
+}
+
+.philanthropyBanner-tit-ornament-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.philanthropyBanner-tit-ornament-box figure {
+
+    &:nth-child(1) {
+        position: absolute;
+        z-index: 2;
+        width: 14%;
+        height: 15%;
+        transform: translateX(430%) translateY(100%);
+    }
+
+    &:nth-child(2) {
+        position: absolute;
+        z-index: 2;
+        width: 12%;
+        height: 14%;
+        transform: translateX(470%) translateY(400%);
+    }
+
+    &:nth-child(3) {
+        position: absolute;
+        z-index: 2;
+        width: 10%;
+        height: 10%;
+        transform: translateX(830%) translateY(850%);
+    }
+}
+
+/* 公益理念-歷年成果 */
+#philanthropy-productList {
+    width: 100%;
+    /* height: 130vh; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* 頭尾貼齊＋均分 */
+
+}
+
+#philanthropy-productList::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('../images/philanthropy/mountain-w-XL.png');
+    background-size: cover;
+    /* background-position: center; 上方會被切掉*/
+    background-repeat: no-repeat;
+    filter: var(--shadow);
+    z-index: -1;
+    transform: translateY(-5%);
+}
+
+#philanthropy-productList .productList-tit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* 靠左對齊 */
+    width: 100%;
+}
+
+.philanthropy-tit-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 28%;
+}
+
+.philanthropy-tit-box .season-productList-tit {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: var(--text);
+    padding-left: 0px;
+    align-self: stretch;
+    justify-content: center;
+}
+
+.philanthropy-tit-box h3 {
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 40px);
+    letter-spacing: .2em;
+}
+
+.helpFarmers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.helpFarmers h6 {
+    text-align: center;
+    font-family: var(--GenSenRounded-R);
+    font-size: clamp(24px, 2.5vw + 1rem, 32px);
+    letter-spacing: .15em;
+    padding-top: 100px;
+    color: #856a45;
+}
+
+.helpFarmers .philanthropy-list {
+    display: flex;
+    justify-content: center;
+}
+
+.helpFarmers li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 4%;
+}
+
+.helpFarmers li h4 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--NotoSans);
+    font-size: clamp(100px, 10vw + 1rem, 136px);
+    letter-spacing: -.03em;
+    font-weight: 500;
+    padding-top: 90px;
+    color: var(--primaryO);
+    line-height: .9;
+}
+
+.helpFarmers li p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--NotoSans);
+    font-size: clamp(16px, 2vw + 1rem, 20px);
+    font-weight: 400;
+    color: #856a45;
+    line-height: 1;
+    padding-right: 6px;
+}
+
+.helpFarmers li h3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--NotoSans);
+    font-size: clamp(30px, 2.8vw + 1rem, 40px);
+    letter-spacing: .2em;
+    font-weight: 400;
+    color: #856a45;
+    line-height: 1;
+}
+
+.philanthropy-list-right-top {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 30px 10px;
+}
+
+.philanthropy-list-right-botton {
+    display: flex;
+    align-items: flex-end;
+}
+
+.helpFarmers .contact {
+    margin: 70px auto;
+    font-family: var(--GenSenRounded-l);
+    color: #856a45;
+    line-height: 2em;
+    letter-spacing: .16em;
+}
+
+/* 公益理念-歷年成果-社會責任 */
+#responsibility {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.responsibility-contact {
+    width: 40%;
+    margin-right: 6%;
+}
+
+/* .contact-titBox figure {
+    width: 13%;
+} */
+.contact-titBox {
+    display: flex;
+    margin: 130px 0 20px 0;
+    align-items: center;
+}
+
+.contact-titBox h3 {
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 40px);
+    letter-spacing: .2em;
+    color: var(--primaryG);
+}
+
+.responsibility-contact p {
+    margin-left: 13.5%;
+    display: flex;
+    font-family: var(--GenSenRounded-L);
+    color: var(--text);
+    line-height: 1.6;
+    letter-spacing: .16em;
+    font-size: clamp(16px, 2vw + 1rem, 20px);
+}
+
+
+#responsibility .report {
+    list-style-type: none;
+    /* 使li的黑點消失 */
+    margin-left: 13.5%;
+    display: block;
+}
+
+.responsibility-contact .li {
+    display: flex;
+}
+
+.responsibility-contact .year {
+
+    margin:5px 0 2px 0;
+    padding: 2px 40px;
+    font-family: var(--GenSenRounded-L);
+    color: var(--white);
+    line-height: 1.6;
+    letter-spacing: .16em;
+    font-size: 10px;
+    background-color: var(--primaryG);
+    border-radius: 99px;
+    width: 130px;
+}
+
+.responsibility-contact a {
+    font-family: var(--GenSenRounded-L);
+    color: var(--primaryG);
+    line-height: 1.6;
+    letter-spacing: .16em;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.responsibility-photo {
+    width: 34%;
+    background-image: url('../images/philanthropy/concept-score.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.responsibility-photo h3 {
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size: clamp(38px, 2vw + 1rem, 40px);
+    letter-spacing: .2em;
+    color: var(--text);
+}
+
+.responsibility-photo b {
+    color: var(--primaryO);
+    font-family: var(--NotoSans);
+    font-weight: 500;
+}
+
+.responsibility-photo img {
+    width: 30%;
+    height: auto;
+}
+
+.responsibility-photo figure {
+
+    &:nth-child(2) {
+        transform: translateX(80%) translateY(-80%) rotate(15deg);
+    }
+    &:nth-child(3) {
+        transform: translateX(-15%) translateY(-70%);
+    }
+}
+
+/* 公益理念-理念願景 */
+#vision {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#vision::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('../images/philanthropy/mountain-y.png');
+    background-size: cover;
+    /* background-position: center; 上方會被切掉*/
+    background-repeat: no-repeat;
+    filter: var(--shadow);
+    z-index: -1;
+    transform: translateY(5%);
+}
+
+.vision-title-box {
+    display: flex;
+    align-items: flex-end;
+    width: 90%;
+}
+
+#vision .contact-titBox {
+    width: 83%;
+    margin: 100px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+#vision .introduction {
+    width: 88%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+#vision .introduction p {
+    font-family: var(--GenSenRounded-R);
+    color: var(--text);
+    line-height: 1.6;
+    letter-spacing: .16em;
+    font-size: clamp(26px, 1.8vw + 1rem, 28px);
+}
+
+#vision .introduction b {
+    font-family: var(--GenSenRounded-R);
+    color: var(--primaryO);
+    font-weight: 300;
+}
+
+#vision .introduction img {
+    transform: rotate(10deg);
+}
+
+#vision .card {
+    display: flex;
+    width: 70%;
+}
+
+#vision li {
+    position: relative;
+    justify-content: center;
+    width: 250px;
+    height: 224px;
+    border-radius: 48px;
+    margin: 0 5%;
+
+
+    &:nth-child(1) {
+        background-color: var(--primaryG);
+    }
+
+    &:nth-child(2) {
+        background-color: var(--primaryO);
+    }
+
+    &:nth-child(3) {
+        background-color: #856a45;
+    }
+}
+
+#vision .card .card-top {
+    height: 94px;
+    padding-top: 27px;
+    position: relative;
+    /* margin: 0 22px; */
+
+
+}
+
+#vision .card .card-top h4 {
+    font-size: 28px;
+    letter-spacing: .16em;
+    font-family: var(--GenSenRounded-R);
+    text-align: center;
+    color: var(--white);
+}
+
+#vision .card .card-introduction {
+    padding-bottom: 6px;
+    font-size: 16px;
+    font-family: var(--GenSenRounded-R);
+    text-align: center;
+    margin: 0 22px;
+    letter-spacing: .12em;
+    border-bottom: 3px solid var(--lightGreen);
+    color: var(--white);
+}
+
+#vision .card .item {
+    margin: 24px;
+    line-height: 1.6;
+    letter-spacing: .12em;
+    color: var(--white);
 }
 
 
