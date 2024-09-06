@@ -24,7 +24,19 @@ body {
     align-items: center;
     margin-bottom: 50px;
 }
+.activity-2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-left: 100px
+}
+
 .activity img {
+    width: 50%;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+.activity-2 img {
     width: 50%;
     border-radius: 25px;
     margin-right: 20px;
