@@ -222,9 +222,3 @@ filterButtons(productButtons, product);
 
 // 其他
 filterButtons(otherButtons, other);
-
-//商品櫥窗
-$( function() {
-    $( "#tabs" ).tabs();
-  } );
-
