@@ -110,6 +110,7 @@ address {
 
     /* 輔助 */
     --text: #514535;
+    --text2: #856a45;
     --white: #F1F1F1;
     --red: rgb(235, 99, 40);
     --grey: #B1AAA1;
@@ -1332,39 +1333,47 @@ footer {
 #product {
     display: flex;
     justify-content: center;
-    padding: 150px 10%;
+    padding: 150px 10% 0px 10%;
 }
+
 .product-tabs {
     display: flex;
     flex-direction: column;
 }
+
 .tabs-box {
     display: flex;
     width: 35vw;
     height: 26.25vw;
 
 }
+
 .tabs-box img {
     object-fit: cover;
     border-radius: 1vw;
 }
 
 .product-tabs-btn {
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    padding: 1.4vw 0;
+    padding: 1.32vw 0;
 }
+
 .product-tabs-btn li {
     cursor: pointer;
 }
+
 .product-tabs-btn li a:active {
-    outline: none;/* 避免焦點樣式影響外觀 */
+    outline: none;
+    /* 避免焦點樣式影響外觀 */
 }
+
 .product-tabs-btn a {
     display: flex;
-    width: 7vw;
-    height: 7vw;
+    width: 7.5vw;
+    height: 7.5vw;
 }
+
 .product-tabs-btn img {
     object-fit: cover;
     border-radius: .6vw;
@@ -1373,84 +1382,364 @@ footer {
 .product-part {
     padding-left: 5vw;
 }
+
 .product-part-text {
     height: 26.25vw;
     display: flex;
-    flex-direction:column;
-    justify-content:space-between;
+    flex-direction: column;
+    justify-content: space-between;
     margin-bottom: 1.4vw;
-
 }
 
 .product-part .titbox {
     font-family: var(--GenSenRounded-M);
     line-height: 1.2;
     padding-bottom: 10px;
-
-
-}
-.product-part .titbox h1{
-        font-size: clamp(22px, 1.5vw + 1rem, 26px);
-    letter-spacing:.3em;
 }
 
-.product-part .titbox h2{
+.product-part .titbox h1 {
+    font-size: clamp(22px, 1.5vw + 1rem, 26px);
+    letter-spacing: .3em;
+}
+
+.product-part .titbox h2 {
     font-size: clamp(22px, 1.3vw + 1rem, 24px);
-    letter-spacing:.1em;
+    letter-spacing: .1em;
 }
-.product-part h6{
+
+.product-part h6 {
     font-size: clamp(28px, 1.5vw + 1rem, 32px);
-    letter-spacing:.1em;
-    color:#EB6328 ;
+    letter-spacing: .1em;
+    color: #EB6328;
     padding: 10px 0;
     margin-bottom: 15px;
     background-color: var(--lightGreen);
     border-radius: .6vw;
 }
 
-.product-part p{
+.product-part p {
     font-family: var(--GenSenRounded-L);
     font-size: clamp(12px, 1.2vw + 1rem, 16px);
     margin-bottom: 17px;
-    letter-spacing:.1em;
+    letter-spacing: .1em;
 }
+
 .product-part-text details {
     font-family: var(--GenSenRounded-L);
     font-size: clamp(10px, 1.2vw + 1rem, 14px);
     color: var(--grey);
 }
+
 .product-part-text pre {
     font-family: var(--GenSenRounded-L);
     font-size: clamp(6px, 1vw + 1rem, 10px);
     color: var(--grey);
-} 
-.product-part .choose-box {
-    display: flex;
 }
-.product-part .choose {
-    font-family: var(--GenSenRounded-M);
-    font-size: clamp(22px, 1.3vw + 1rem, 24px);
-    line-height: 1.1;
-    letter-spacing:.1em;
-}
-.product-part .line {
-    width: clamp(100px, 1.3vw + 1rem, 120px);
-    border-bottom: 1px solid var(--text);
-}
+
 .product-part-ToBuy {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7.5vw;
+
+}
+
+.product-part-ToBuy .choose-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-part-ToBuy .choose {
+    font-family: var(--GenSenRounded-L);
+    font-size: clamp(20px, 1.3vw + 1rem, 22px);
+    line-height: 1.3;
+    letter-spacing: .1em;
+    margin-right: 10px;
+    width: 20vw;
+}
+
+.product-part-ToBuy .line {
+    width: 18.4vw;
+    border-bottom: 1px solid var(--text);
+
 }
 
 .product-part-ToBuy fieldset {
-border: 0;
-font-family: var(--GenSenRounded-L);
-font-size: clamp(12px, 1.2vw + 1rem, 16px);
-letter-spacing:.1em;
+    border: 0;
+    font-family: var(--GenSenRounded-L);
+    font-size: clamp(20px, 1.3vw + 1rem, 22px);
+    letter-spacing: .2em;
+    color: var(--primaryO);
+    display: flex;
 }
-.product-part-ToBuy fieldset label {
-    margin-right:48px ;
+
+.product-part-ToBuy form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.product-part-ToBuy fieldset div {
+    display: flex;
+    align-items: center;
+}
+
+.product-part-ToBuy fieldset .choose1 {
+    padding-right: 3vw;
+}
+.product-part-ToBuy fieldset input {
+    padding: 10px;
+
+}
+.product-part-ToBuy label {
+    margin-left: 10px;
+}
+
+.product-part-ToBuy a {
+    background-color: var(--primaryG);
+    font-family: var(--GenSenRounded-L);
+    color: var(--white);
+    width: 12%;
+    border-radius: 24px;
+    padding: .5rem .8rem;
+    text-align: center;
+    letter-spacing: .2rem;
+    font-size: 20PX;
+}
+
+
+/* 客製果乾-搭配介紹 */
+#introduce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#introduce .contact-titBox {
+margin-top: 80px;
+}
+#introduce .contact-titBox h3{
+    color: #856a45;
+    }
+#introduce p {
+    margin-top: 20px;
+    line-height: 1.8;
+    font-family: var(--GenSenRounded-L);
+    font-size: clamp(16px, 1.3vw + 1rem, 20px);
+    letter-spacing: .2em;
+}
+#introduce p b {
+    font-family: var(--GenSenRounded-L);
+    font-weight: 400;
+    color: var(--primaryO);
     
 }
+
+
+#introduce .ornament-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#introduce .ornament-box figure {
+
+    &:nth-child(1) {
+        position: absolute;
+        z-index: 2;
+        width: 15%;
+        height: 15%;
+        transform: translateX(485%) translateY(12%);
+    }
+
+    &:nth-child(2) {
+        position: absolute;
+        z-index: 2;
+        width: 9%;
+        height: 9%;
+        transform: translateX(160%) translateY(100%) rotate(-35deg);
+    }
+}
+
+
+
+/* 客製果乾-果乾挑選 */
+#picking {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: space-around;
+     */
+}
+
+#picking::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('../images/philanthropy/mountain-w-XL.png');
+    background-size: cover;
+    /* background-position: center; 上方會被切掉*/
+    /* background-repeat: no-repeat; */
+    filter: var(--shadow);
+    z-index: -1;
+    transform: translateY(5%) rotateY(180deg);
+}
+#picking .picking-text {
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    margin: 300px auto 0 auto;
+    width: 80%;
+}
+#picking .picking-text-2 {
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    margin: 50px auto 0 auto;
+    width: 80%;
+}
+#picking .circle {
+    background-color: var(--primaryO);
+    height: 25px;
+    width: 25px;
+    border-radius: 99px;
+
+}
+#picking h4 {
+    font-size: clamp(26px, 1.3vw + 1rem, 28px);
+    font-family: var(--GenSenRounded-M);
+    letter-spacing: .3em;
+    padding: 0 2px 0 5px;
+}
+#picking  p {
+    font-family: var(--GenSenRounded-L);
+    font-size: clamp(16px, 1.3vw + 1rem, 20px);
+    letter-spacing: .1em;
+    padding-left: 10px;
+}
+/* 客製果乾 - 果乾挑選 - 選單設定 */
+.picking-cardlist {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 9.9vw;
+    padding: 56px 0;
+    border-bottom: 3px solid var(--primaryG);
+}
+.picking-cardlist-2 {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 9.9vw;
+    padding: 56px 0;
+}
+#picking .fruitCard {
+    display: flex;
+}
+#fruitImage {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+.fruitInf {
+display: flex;
+flex-direction:column;
+width: 160px;
+margin-left: 20px;
+}
+.fruitInf label {
+    font-family: var(--GenSenRounded-M);
+    font-size: clamp(16px, 1.3vw + 1rem, 20px);
+    letter-spacing: .2em;
+    line-height: 1;
+    padding-bottom: 5px;
+
+}
+#fruitSelect {
+    width: 110px;
+    border: 2px solid var(--primaryG);
+    border-radius: 99px;
+    letter-spacing: 0.2rem;
+    padding: .3rem 1rem;
+    margin: .2rem 0;
+    font-family: var(--GenSenRounded-L);
+    font-size: 16px;
+    color: var(--primaryG);
+}
+#fruitDescription {
+    font-family: var(--GenSenRounded-L);
+    font-weight: 100;
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: .05rem;
+    line-height: 1.35;
+}
+.picking-cardlist-2 .fruitCardBtn-box {
+    display: flex;
+    flex-direction:row-reverse;
+    align-items:flex-end;
+    width: 350px;
+    padding-right: 3vw;
+}
+.fruitCardBtn-box .fruitCardBtn {
+
+    background-color: var(--primaryO);
+    line-height: 1;
+    font-family: var(--GenSenRounded-L);
+    color: var(--white);
+    border-radius: 24px;
+    padding: .5rem .8rem;
+    text-align: center;
+    letter-spacing: .2rem;
+    font-size: 20PX;
+}
+
+
+
+
+/* 客製果乾 - 特色介紹 */
+#cus-features {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(10px); 
+
+}
+
+#cus-features::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('../images/shopping/mountain-g-nomal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* filter: var(--shadow); */
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
