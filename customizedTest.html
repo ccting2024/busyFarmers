@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水果圖片與介紹切換</title>
+    <style>
+        #fruitImage {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+        }
+        .fruitInf {
+            
+        }
+        #fruitDescription {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 基底一-圖片資訊 -->
+    <div>
+        <img id="fruitImage" src="" alt="水果圖片">
+    </div>
+  <!-- 基底ㄧ-文字資訊 -->
+    <div class="fruitInf">
+    <label for="fruitSelect">基底一</label>
+    <select id="fruitSelect" onchange="changeFruit()">
+         <!-- 基底ㄧ-選單 -->
+        <option value="">-- 請選擇 --</option>
+        <option value="pitaya">火龍果</option>
+        <option value="strawberry">草莓</option>
+        <option value="apple">蘋果</option>
+        <option value="pear">水梨</option>
+        <option value="blueberry">藍莓</option>
+        <option value="banana">香蕉</option>
+        <option value="orange">橘子</option>
+        <option value="lemon">檸檬</option>
+        <option value="pineapple">鳳梨</option>
+    </select>
+    <!-- 基底ㄧ-水果介紹 -->
+    <div id="fruitDescription"></div> 
+</div>
+    <script>
+        // 設定水果圖片和介紹的對應資料
+        const fruitData = {
+            apple: {
+                image: './images/customized/cus-3-unsplash.jpg',
+                description: `梨山特產：<br> 脆甜清爽帶有淡淡的酸味。富維生素C，輕熟女最愛`
+            },
+            pitaya: {
+                image: './images/customized/cus-1-unsplash.jpg',
+                description: `彰化特產：<br>清甜多汁，香氣迷人。富含抗氧化劑，有助提升免疫力`
+            }
+            ,strawberry: {
+                image: './images/customized/cus-2-unsplash.jpg',
+                description: `大湖特產：<br>香甜酸爽，果肉細緻多汁。使皮膚水潤，最高人氣！`
+            },
+            pear: {
+                image: './images/customized/cus-4-unsplash.jpg',
+                description: `關西特產：<br> 多汁清甜質地脆爽。有豐富維生素K，幫助潤肺止咳`
+            },
+            blueberry: {
+                image: './images/customized/cus-5-unsplash.jpg',
+                description: `阿里山特產：<br> 微酸甜，帶有濃郁迷人果香。保健眼睛，3Ｃ族首選！`
+            },
+            banana: {
+                image: './images/customized/cus-6-unsplash.jpg',
+                description: '旗山特產：<br> 甜度高，有助促進心血管健康，老人小孩的最愛'
+            },
+
+            orange: {
+                image: './images/customized/cus-7-unsplash.jpg',
+                description: '苗栗特產：<br>  酸甜滋味適中，果肉多汁。維生素C高，幫助美容美白'
+            },
+            lemon: {
+                image: './images/customized/cus-8-unsplash.jpg',
+                description: '九如特產：<br> 酸味強烈，果香新鮮濃郁。維生素C幫助具抗氧化'
+            },
+            pineapple: {
+                image: './images/customized/cus-9-unsplash.jpg',
+                description: '枋寮特產：<br>香甜多汁，酸甜均衡熱帶風味。人氣超高小農推薦～'
+            },
+        };
+
+
+         // 當頁面加載時預設顯示第一張圖片和介紹
+         window.onload = function() {
+            const fruitSelect = document.getElementById('fruitSelect');
+            fruitSelect.selectedIndex = 0; // 預設選中第一個選項
+            changeFruit(); // 顯示對應的水果圖片和介紹
+        };
+
+        // 切換水果圖片與介紹的函數
+        function changeFruit() {
+            const fruitSelect = document.getElementById('fruitSelect');
+            const fruitImage = document.getElementById('fruitImage');
+            const fruitDescription = document.getElementById('fruitDescription');
+            const selectedFruit = fruitSelect.value;
+
+            // 如果選擇了水果，則顯示對應的圖片和介紹
+            if (selectedFruit) {
+                fruitImage.src = fruitData[selectedFruit].image;
+                fruitImage.alt = selectedFruit + ' 圖片';
+                fruitDescription.innerHTML = fruitData[selectedFruit].description; // 使用 innerHTML 來解析 HTML 標籤
+            }
+       
+            //else {
+            //     // 如果未選擇水果，則清空圖片和介紹
+            //     fruitImage.src = '';
+            //     fruitImage.alt = '水果圖片';
+            //     fruitDescription.innerHTML = '';
+            // }
+        }
+    </script>
+
+</body>
+</html>
