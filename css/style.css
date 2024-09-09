@@ -1699,9 +1699,6 @@ margin-left: 20px;
     font-size: 20PX;
 }
 
-
-
-
 /* 客製果乾 - 特色介紹 */
 #cus-features {
     width: 100%;
@@ -1711,7 +1708,6 @@ margin-left: 20px;
     align-items: center;
     justify-content: space-around;
     transform: translateY(10px); 
-
 }
 
 #cus-features::before {
@@ -1728,21 +1724,6 @@ margin-left: 20px;
     /* filter: var(--shadow); */
     z-index: -1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
