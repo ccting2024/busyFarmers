@@ -1566,7 +1566,7 @@ margin-top: 80px;
 /* 客製果乾-果乾挑選 */
 #picking {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
     display: flex;
     flex-direction: column;
