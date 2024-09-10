@@ -98,3 +98,30 @@ display: block;
 .contact-titBox {
     position: relative;
     top: -40px;}
+
+    #picking {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center;
+        justify-content: space-around;
+         */
+    }
+    
+    #picking::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 150%;
+        background-image: url('../images/philanthropy/mountain-w-XL.png');
+        background-size: cover;
+        /* background-position: center; 上方會被切掉*/
+        /* background-repeat: no-repeat; */
+        filter: var(--shadow);
+        z-index: -1;
+        transform: translateY(5%) rotateY(180deg);
+    }
