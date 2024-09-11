@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-}
+} */
 
 .hero {
     text-align: center;
@@ -80,7 +80,7 @@ body {
     border-radius: 10px;
 }
 
-.activity-plans {
+/* .activity-plans {
     background-color: #fff;
     padding: 50px 20px;
     text-align: center;
@@ -155,4 +155,149 @@ body {
     .plan img {
         margin-bottom: 20px;
     }
+} */
+
+.activity-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
 }
+
+.activity-section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primaryO);
+    padding: 10px;
+    font-weight: 500;
+}
+
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.activity-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #F79E3C;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.activity-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.activity-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.activity-text h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    /* color: #333; */
+    font-weight: 500;
+    font-family: var(--GenSenRounded-R);
+}
+
+.activity-text p {
+    font-size: 14px;
+    color: #666;
+}
+
+.activity-price-button {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+.activity-price-button button {
+    margin-left: 10px;
+    background-color: #F79E3C;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.activity-price-button button:hover {
+    background-color: #e58e2e;
+}
+
+/* RWD for smaller screens */
+@media (max-width: 768px) {
+    .activity-container {
+        flex-direction: column;
+    }
+
+    .activity-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .activity-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activity-price-button {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .activity-price-button button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #FFA500; /* 文字的顏色 */
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+
+/* .section-title::before{
+    content: "";
+    flex: ;
+    border-bottom: 2px solid #FFA500; /* 橫槓的顏色
+    margin: 0 20px 10px 50px; /* 控制橫槓與文字的間距 */
+}
+
+/* .section-title::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid #FFA500; /* 橫槓的顏色 */
+    margin: 0 20px; /* 控制橫槓與文字的間距 */
+} */ */
+
