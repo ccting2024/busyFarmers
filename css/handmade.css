@@ -18,7 +18,7 @@
 
 .hero-content {
     max-width: 1300px;
-    margin: 20px;
+    margin: 50px;
 }
 
 .image-text-container {
@@ -37,6 +37,7 @@
 .text-content {
     width: 70%;
     text-align: left;
+    padding: 20px;
 }
 
 /* .section-title {
@@ -72,6 +73,7 @@
     font-size: 16px;
     letter-spacing: .15rem;
     margin-bottom: 15px;
+    padding-right: 70px;
 }
 
 .hero-content img {
@@ -360,7 +362,7 @@ margin 0 20px;
 /* 每個體驗內容區塊的樣式 */
 .activity-explanation-content {
     display: inline-block;
-    width: 24%;
+    width: 31%;
     text-align: center;
 }
 
@@ -384,9 +386,9 @@ margin 0 20px;
     position: relative;
     /* 以正常文檔流為基礎移動 */
     top: 20px;
-    /* 往下移動 20px */
-    left: 70px;
-    /* 往右移動 10px */
+    /* 往下移動 */
+    left: 125px;
+    /* 往右移動 */
     z-index: 2;
 }
 
@@ -409,10 +411,10 @@ margin 0 20px;
     /* 調整高度 */
     position: relative;
     /* 這裡也可以用 absolute 視情況而定 */
-    left: 75px;
-    /* 往右移動 20px */
+    left: 130px;
+    /* 往右移動 */
     bottom: 10px;
-    /* 往下移動 10px */
+    /* 往下移動 */
     justify-content: center;
     align-items: center;
     z-index: 1;
@@ -443,51 +445,130 @@ margin 0 20px;
 
 
 /* 購票須知 */
-.ticket-info {
-    text-align: center;
-    position: relative;
-}
-
-.ticket-container {
+.ticket-info-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
 }
 
-.ticket-item {
-    width: 40%;
-    border-radius: 50%;
-    padding: 100px;
+/* 橘色不規則形狀 */
+.orange-shape {
+    background: url('/images/handmade/Vector.png') no-repeat center/cover;
+    /* 橘色形狀的背景圖片 */
+    padding: 80px 50px;
     position: relative;
+    width: 300px;
+    /* 根據形狀大小進行調整 */
+    height: 300px;
+    /* 根據形狀大小進行調整 */
+    border-radius: 10px;
+    left: 300px;
+    background-size: contain;
+}
+
+.orange-shape p {
     color: white;
-}
-
-.ticket-item.left {
-    /* background-color: #F9A825; */
-    /* 背景顏色，可換成背景圖片 */
-    background-image: url('../images/handmade/Vector.png');
-    background-size: cover;
-}
-
-.ticket-item.right {
-    /* background-color: #558B2F; */
-    /* 背景顏色，可換成背景圖片 */
-    background-image: url('../images/handmade/Vector2.png');
-    background-size: cover;
-}
-
-/* 小物件圖片的樣式 */
-.decoration-left {
+    font-size: 16px;
+    text-align: left;
     position: absolute;
-    top: 30%;
-    left: 10%;
-    width: 50px;
-    size: 80%;
+    top: 50%;
+    /* 根據需要調整文字在形狀中的位置 */
+    left: 50%;
+    transform: translate(-50%, -60%);
+    /* 讓文字居中 */
+    width: 200px;
 }
 
-.decoration-right {
+/* 綠色不規則形狀 */
+.green-shape {
+    background: url('/images/handmade/Vector2.png') no-repeat center/cover;
+    /* 綠色形狀的背景圖片 */
+    padding: 80px 50px;
+    position: relative;
+    width: 300px;
+    /* 根據形狀大小進行調整 */
+    height: 300px;
+    /* 根據形狀大小進行調整 */
+    border-radius: 10px;
+    left: -300px;
+    background-size: contain;
+}
+
+.green-list {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 16px;
+    color: white;
+    text-align: left;
     position: absolute;
-    top: 30%;
-    right: 10%;
-    width: 50px;
+    top: 55%;
+    /* 根據需要調整文字在形狀中的位置 */
+    left: 50%;
+    transform: translate(-50%, -60%);
+    /* 讓文字居中 */
+    width: 200px;
+}
+
+.green-list li {
+    margin-bottom: 10px;
+}
+
+/* 裝飾圖片 */
+.orange-decor {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 90px;
+    /* 根據裝飾大小進行調整 */
+}
+
+.green-decor {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 100px;
+    /* 根據裝飾大小進行調整 */
+}
+
+/* Map */
+.location-section {
+    display: flex;
+    background-color: #856a45;
+    padding: 20px 80px;
+    /* border-radius: 15px; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-info {
+    flex: 1;
+    color: #fff;
+    font-size: 18px;
+}
+
+.location-icon {
+    margin-bottom: 20px;
+}
+
+.location-icon img {
+    width: 40px;
+    /* 根據圖示大小調整 */
+}
+
+.location-details {
+    line-height: 2;
+}
+
+.location-map {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.location-map iframe {
+    border-radius: 20px;
+    /* 地圖的圓角 */
+    width: 100%;
+    height: 450px;
+    /* 調整地圖高度 */
 }
