@@ -38,51 +38,97 @@
     </nav>
 </header>
 
-<!-- 主要內容 -->
-<main>
-    <body>
-        <div id="title" class="container">
-            <!-- <h2 class="title">活動體驗</h2> -->
-            <div class="contact-titBox">
-                <figure><img src="./images/philanthropy/spring-tit-1.svg" alt=""></figure>
-                <h2 class="title">活動體驗</h2>
-                <figure><img src="./images/philanthropy/spring-tit-2.svg" alt=""></figure>
-            </div>
-            <div class="activity">
-                <div class="description">
-                    <h3>手工果醬/果乾製作體驗</h3>
-                    <p>透過手作果醬、果乾製作，享受自製健康食品的樂趣。</p>
-                </div>
-                <img src="./images/activity/activity-1.png" alt="手工果醬/果乾製作體驗">
-            </div>
-            <div class="activity-2">
-                <div class="description">
-                    <h3>一日農夫採果體驗</h3>
-                    <p>親自採摘新鮮水果，感受田園生活的樂趣與豐收的喜悅。</p>
-                </div>
-                <img src="./images/activity/activity-2.png" alt="一日農夫採果體驗">
-            </div>
-            <div class="activity">
-                <div class="description">
-                    <h3>果乾花圈手作體驗</h3>
-                    <p>使用果乾、天然植物，製作美麗的花圈裝飾品。</p>
-                </div>
-                <img src="./images/activity/activity-3.png" alt="果乾花圈手作體驗">
-            </div>
-            <div class="activity-2">
-                <div class="description">
-                    <h3>農村體驗一日遊</h3>
-                    <p>參觀農場，體驗農村生活，學習農業知識。</p>
-                </div>
-                <img src="./images/activity/activity-4.png" alt="農村體驗一日遊">
-            </div>
-        </div>
-        
-    </body>
-    </html>
-</main>
 
-    <!-- footer-不要修改謝謝 -->
+<body>
+    <header>
+        <!-- 頁面標題 -->
+        <h2>活動體驗報名</h2>
+    </header>
+
+    <main>
+        <!-- 活動資訊區塊 -->
+        <section class="activity-info">
+            <h2>活動資訊</h2>
+            <div class="activity-details">
+                <img src="path-to-image" alt="水果乾製作體驗">
+                <div class="activity-description">
+                    <h3>手工果乾製作體驗</h3>
+                    <p>1. 人數有限，需事先報名<br>2. 報名者須準時到場，體驗時長約 1 小時</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 報名人數區塊 -->
+        <section class="participant-count">
+            <h2>報名人數</h2>
+            <div class="count-controls">
+                <p>NT$ 200</p>
+                <div class="counter">
+                    <button class="minus">-</button>
+                    <input type="number" value="1">
+                    <button class="plus">+</button>
+                </div>
+                <span>人</span>
+            </div>
+        </section>
+
+        <!-- 聯絡資訊區塊 -->
+        <section class="contact-info">
+            <h2>聯絡資訊</h2>
+            <form>
+                <label for="name">聯絡人姓名：</label>
+                <input type="text" id="name" required>
+
+                <label for="phone">聯絡電話：</label>
+                <input type="tel" id="phone" required>
+
+                <label for="email">電子郵件：</label>
+                <input type="email" id="email" required>
+
+                <label for="address">地址：</label>
+                <input type="text" id="address" required>
+            </form>
+        </section>
+
+        <!-- 報名日期區塊 -->
+        <section class="registration-dates">
+            <h2>報名日期</h2>
+            <form>
+                <label for="date">活動日期：</label>
+                <select id="date">
+                    <option value="2024-10-01">2024-10-01</option>
+                    <option value="2024-10-02">2024-10-02</option>
+                    <option value="2024-10-03">2024-10-03</option>
+                    <option value="2024-10-04">2024-10-04</option>
+                </select>
+
+                <label for="time">入場時段：</label>
+                <select id="time">
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                </select>
+
+                <label for="remark">備註：</label>
+                <input type="text" id="remark">
+            </form>
+        </section>
+
+        <!-- 加入購物車按鈕 -->
+        <section class="add-to-cart">
+            <button>加入購物車</button>
+        </section>
+    </main>
+
+    <footer>
+        <!-- 頁尾內容 -->
+    </footer>
+</body>
+</html>
+
+
+    <!-- footer -->
     <footer>
         <div id="footer-content">
             <div class="footer-content-box">
@@ -122,7 +168,7 @@
             <img class="footer-back" src="../images/shared/footer-back.png" alt="">
         </div>
     </footer>
-
+</main>
 <script src="./busyJs.js"></script>
 <body>
 
