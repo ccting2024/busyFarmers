@@ -18,7 +18,7 @@
 
 .hero-content {
     max-width: 1300px;
-    margin: 20px ;
+    margin: 50px;
 }
 
 .image-text-container {
@@ -37,6 +37,7 @@
 .text-content {
     width: 70%;
     text-align: left;
+    padding: 20px;
 }
 
 /* .section-title {
@@ -52,7 +53,7 @@
     font-size: 28px;
     letter-spacing: .15rem;
     width: auto;
-    text-wrap:nowrap;
+    text-wrap: nowrap;
     margin-bottom: 20px;
 }
 
@@ -72,6 +73,7 @@
     font-size: 16px;
     letter-spacing: .15rem;
     margin-bottom: 15px;
+    padding-right: 70px;
 }
 
 .hero-content img {
@@ -180,7 +182,7 @@
     margin: 0 auto;
 }
 
-.activity-card {
+.activity-plan {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -191,7 +193,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.activity-card img {
+.activity-plan img {
     width: 80px;
     height: 80px;
     border-radius: 10px;
@@ -235,7 +237,7 @@
 
 .activity-price-button button {
     margin-left: 10px;
-    background-color: #F79E3C;
+    background-color: var(--primaryO);
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -255,7 +257,7 @@
         flex-direction: column;
     }
 
-    .activity-card {
+    .activity-plan {
         flex-direction: column;
         text-align: center;
     }
@@ -281,7 +283,8 @@
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    color: #FFA500; /* 文字的顏色 */
+    color: #FFA500;
+    /* 文字的顏色 */
     font-weight: bold;
     position: relative;
     text-align: center;
@@ -292,12 +295,280 @@
     flex: ;
     border-bottom: 2px solid #FFA500; /* 橫槓的顏色
     margin: 0 20px 10px 50px; /* 控制橫槓與文字的間距 */
-}
-
 /* .section-title::after {
     content: "";
     flex: 1;
     border-bottom: 2px solid #FFA500; /* 橫槓的顏色 */
-    margin: 0 20px; /* 控制橫槓與文字的間距 */
-} */ */
+/* margin 0 20px; */
+/* 控制橫槓與文字的間距 */
 
+.activity-experience {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    color: #83b943;
+    /* 綠色標題 */
+    position: relative;
+    font-weight: bold;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background-color: #83b943;
+    margin: 0 10px;
+}
+
+.activity-content {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* 整個區塊的樣式 */
+.activity-explanation {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* 活動說明標題樣式 */
+.activity-explanation-header h2 {
+    font-size: 24px;
+    color: #6AB344;
+    /* 綠色字體 */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* 加上兩邊的橫線 */
+.activity-explanation-header h2:before,
+.activity-explanation-header h2:after {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #6AB344;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+/* 每個體驗內容區塊的樣式 */
+.activity-explanation-content {
+    display: inline-block;
+    width: 31%;
+    text-align: center;
+}
+
+/* 標題的橘色圓角矩形樣式 */
+.activity-header {
+    background-color: var(--primaryO);
+    /* 橘色 */
+    border-radius: 25px;
+    /* 圓角 */
+    width: 210px;
+    /* 寬度 */
+    height: 60px;
+    /* 高度 */
+    padding: 10px 0;
+    /* 上下內距 */
+    margin-bottom: 20px;
+    display: flex;
+    /* 將內容置中 */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* 以正常文檔流為基礎移動 */
+    top: 20px;
+    /* 往下移動 */
+    left: 125px;
+    /* 往右移動 */
+    z-index: 2;
+}
+
+.activity-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* 內文的白色圓角矩形樣式 */
+.activity-body {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 35px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* 陰影效果 */
+    width: 200px;
+    /* 調整寬度 */
+    height: 180px;
+    /* 調整高度 */
+    position: relative;
+    /* 這裡也可以用 absolute 視情況而定 */
+    left: 130px;
+    /* 往右移動 */
+    bottom: 10px;
+    /* 往下移動 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.activity-body p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+/* 項目符號樣式 */
+.bullet-list {
+    list-style-type: disc;
+    /* 設定項目符號為圓點 */
+    padding-left: 10px;
+    /* 調整符號與文字間距 */
+}
+
+.bullet-list li {
+    text-align: left;
+    /* 文字靠左對齊 */
+    margin-bottom: 5px;
+    /* 項目之間的距離 */
+}
+
+
+/* 購票須知 */
+.ticket-info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 橘色不規則形狀 */
+.orange-shape {
+    background: url('/images/handmade/Vector.png') no-repeat center/cover;
+    /* 橘色形狀的背景圖片 */
+    padding: 80px 50px;
+    position: relative;
+    width: 300px;
+    /* 根據形狀大小進行調整 */
+    height: 300px;
+    /* 根據形狀大小進行調整 */
+    border-radius: 10px;
+    left: 300px;
+    background-size: contain;
+}
+
+.orange-shape p {
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    /* 根據需要調整文字在形狀中的位置 */
+    left: 50%;
+    transform: translate(-50%, -60%);
+    /* 讓文字居中 */
+    width: 200px;
+}
+
+/* 綠色不規則形狀 */
+.green-shape {
+    background: url('/images/handmade/Vector2.png') no-repeat center/cover;
+    /* 綠色形狀的背景圖片 */
+    padding: 80px 50px;
+    position: relative;
+    width: 300px;
+    /* 根據形狀大小進行調整 */
+    height: 300px;
+    /* 根據形狀大小進行調整 */
+    border-radius: 10px;
+    left: -300px;
+    background-size: contain;
+}
+
+.green-list {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 16px;
+    color: white;
+    text-align: left;
+    position: absolute;
+    top: 55%;
+    /* 根據需要調整文字在形狀中的位置 */
+    left: 50%;
+    transform: translate(-50%, -60%);
+    /* 讓文字居中 */
+    width: 200px;
+}
+
+.green-list li {
+    margin-bottom: 10px;
+}
+
+/* 裝飾圖片 */
+.orange-decor {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 90px;
+    /* 根據裝飾大小進行調整 */
+}
+
+.green-decor {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 100px;
+    /* 根據裝飾大小進行調整 */
+}
+
+/* Map */
+.location-section {
+    display: flex;
+    background-color: #856a45;
+    padding: 20px 80px;
+    /* border-radius: 15px; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-info {
+    flex: 1;
+    color: #fff;
+    font-size: 18px;
+}
+
+.location-icon {
+    margin-bottom: 20px;
+}
+
+.location-icon img {
+    width: 40px;
+    /* 根據圖示大小調整 */
+}
+
+.location-details {
+    line-height: 2;
+}
+
+.location-map {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.location-map iframe {
+    border-radius: 20px;
+    /* 地圖的圓角 */
+    width: 100%;
+    height: 450px;
+    /* 調整地圖高度 */
+}

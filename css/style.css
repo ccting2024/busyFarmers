@@ -1510,10 +1510,12 @@ footer {
 .product-part-ToBuy fieldset .choose1 {
     padding-right: 3vw;
 }
+
 .product-part-ToBuy fieldset input {
     padding: 10px;
 
 }
+
 .product-part-ToBuy label {
     margin-left: 10px;
 }
@@ -1538,12 +1540,15 @@ footer {
     align-items: center;
     text-align: center;
 }
+
 #introduce .contact-titBox {
-margin-top: 80px;
+    margin-top: 80px;
 }
-#introduce .contact-titBox h3{
+
+#introduce .contact-titBox h3 {
     color: #856a45;
-    }
+}
+
 #introduce p {
     margin-top: 20px;
     line-height: 1.8;
@@ -1551,11 +1556,12 @@ margin-top: 80px;
     font-size: clamp(16px, 1.3vw + 1rem, 20px);
     letter-spacing: .2em;
 }
+
 #introduce p b {
     font-family: var(--GenSenRounded-L);
     font-weight: 400;
     color: var(--primaryO);
-    
+
 }
 
 
@@ -1613,39 +1619,45 @@ margin-top: 80px;
     z-index: -1;
     transform: translateY(5%) rotateY(180deg);
 }
+
 #picking .picking-text {
     display: flex;
-    flex-direction:row;
-    align-items:center;
+    flex-direction: row;
+    align-items: center;
     margin: 300px auto 0 auto;
     width: 80%;
 }
+
 #picking .picking-text-2 {
     display: flex;
-    flex-direction:row;
-    align-items:center;
+    flex-direction: row;
+    align-items: center;
     margin: 50px auto 0 auto;
     width: 80%;
 }
-.circle {
+
+#picking .circle {
     background-color: var(--primaryO);
     height: 25px;
     width: 25px;
     border-radius: 99px;
 
 }
+
 #picking h4 {
     font-size: clamp(26px, 1.3vw + 1rem, 28px);
     font-family: var(--GenSenRounded-M);
     letter-spacing: .3em;
     padding: 0 2px 0 5px;
 }
-#picking  p {
+
+#picking p {
     font-family: var(--GenSenRounded-L);
     font-size: clamp(16px, 1.3vw + 1rem, 20px);
     letter-spacing: .1em;
     padding-left: 10px;
 }
+
 /* 客製果乾 - 果乾挑選 - 選單設定 */
 .picking-cardlist {
     display: flex;
@@ -1654,27 +1666,32 @@ margin-top: 80px;
     padding: 56px 0;
     border-bottom: 3px solid var(--primaryG);
 }
+
 .picking-cardlist-2 {
     display: flex;
     justify-content: space-around;
     margin: 0 9.9vw;
     padding: 56px 0;
 }
+
 #picking .fruitCard {
     display: flex;
 }
+
 #fruitImage {
     width: 160px;
     height: 160px;
     object-fit: cover;
     border-radius: 18px;
 }
+
 .fruitInf {
-display: flex;
-flex-direction:column;
-width: 160px;
-margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    margin-left: 20px;
 }
+
 .fruitInf label {
     font-family: var(--GenSenRounded-M);
     font-size: clamp(16px, 1.3vw + 1rem, 20px);
@@ -1683,6 +1700,7 @@ margin-left: 20px;
     padding-bottom: 5px;
 
 }
+
 #fruitSelect {
     width: 110px;
     border: 2px solid var(--primaryG);
@@ -1694,6 +1712,7 @@ margin-left: 20px;
     font-size: 16px;
     color: var(--primaryG);
 }
+
 #fruitDescription {
     font-family: var(--GenSenRounded-L);
     font-weight: 100;
@@ -1702,13 +1721,15 @@ margin-left: 20px;
     letter-spacing: .05rem;
     line-height: 1.35;
 }
+
 .picking-cardlist-2 .fruitCardBtn-box {
     display: flex;
-    flex-direction:row-reverse;
-    align-items:flex-end;
+    flex-direction: row-reverse;
+    align-items: flex-end;
     width: 350px;
     padding-right: 3vw;
 }
+
 .fruitCardBtn-box .fruitCardBtn {
 
     background-color: var(--primaryO);
@@ -1730,7 +1751,7 @@ margin-left: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    transform: translateY(10px); 
+    transform: translateY(10px);
 }
 
 #cus-features::before {

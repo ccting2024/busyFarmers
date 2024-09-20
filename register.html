@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動體驗報名</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<!-- 導覽列-綠-不要修改謝謝 -->
+<header class="topbar greenTopbar">
+    <h1 class="logo">
+        <a href="./index.html"><img src="./images/shared/logo-02.svg" alt="小農好忙Logo"></a>
+    </h1>
+    <nav class="nav-content">
+        <!-- 按鈕區 -->
+        <ul class="nav-links green">
+            <li><a href="./philanthropy.html">公益理念</a></li>
+            <li><a href="./cooperation.html">關於小農</a></li>
+            <li><a href="./customized.html">客製果乾</a></li>
+            <li><a href="./activity.html">GO 遊趣</a></li>
+        </ul>
+
+        <!-- 小農商城 -->
+        <ul>
+            <h2 class="shopping-btn">
+                <a href="./shopping.html" class="shopping-txt">
+                    <img src="./images/shared/bambooHat.png" alt="進入小農商城">
+                    <div>
+                        <div>小農</div>
+                        <div class="shopping-txtl">商城</div>
+                    </div>
+
+                </a>
+            </h2>
+        </ul>
+    </nav>
+</header>
+
+
+    <main>
+        <body>
+        <div id="title" class="container"></div>
+            <div class="contact-titBox">
+                <figure><img src="./images/philanthropy/spring-tit-1.svg" alt=""></figure>
+                <h2 class="title">活動體驗報名</h2>
+                <figure><img src="./images/philanthropy/spring-tit-2.svg" alt=""></figure>
+            </div>
+        <!-- 活動資訊區塊 -->
+        <section class="activity-info">
+                <div class="activity-info-header">
+                    <h3>活動資訊</h3>
+                </div>
+                <div class="activity-content">
+                    <img src="./images/handmade/Thumbnail.png" alt="水果乾" class="activity-image">
+                    <div class="activity-details">
+                        <h3>手工果乾製作體驗</h3>
+                        <ul>
+                            <li>1人成行，平假日皆可使用</li>
+                            <li>因水果產季關係，製作的果乾、果醬口味隨之不同。</li>
+                        </ul>
+                    </div>
+                    <img src="./images/philanthropy/seed-o.svg" alt="裝飾圖案" class="decoration-icon">
+                </div>
+        </section>
+
+        <!-- 報名人數區塊 -->
+        <section class="participant-count">
+            <div class="activity-info-header">
+                <h3>報名人數</h3>
+            </div>
+            <div class="count-controls">
+                <h3><span>NT$ 200</span></h3>
+                <div class="quantity-controls-buttons">
+                    <svg class="decrement" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="16" height="16" rx="4" fill="#6C8C42" />
+                        <path
+                            d="M12.6577 8.73405C12.9017 8.73405 13.0996 8.53618 13.0996 8.2921C13.0996 8.04802 12.9017 7.85016 12.6577 7.85016L3.22949 7.85016C2.98541 7.85016 2.78755 8.04802 2.78755 8.2921C2.78755 8.53618 2.98541 8.73405 3.22949 8.73405L12.6577 8.73405Z"
+                            fill="#F1F1F1" />
+                    </svg>
+
+                    <label for="quantity-input"></label>
+                    <input type="text" class="quantity-input" name="quantity-input" value="1">
+
+                    <svg class="increment" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="16" height="16" rx="4" fill="#6C8C42" />
+                        <path
+                            d="M12.6577 8.73405C12.9017 8.73405 13.0996 8.53618 13.0996 8.2921C13.0996 8.04802 12.9017 7.85016 12.6577 7.85016L3.22949 7.85016C2.98541 7.85016 2.78755 8.04802 2.78755 8.2921C2.78755 8.53618 2.98541 8.73405 3.22949 8.73405L12.6577 8.73405Z"
+                            fill="#F1F1F1" />
+                        <path
+                            d="M7.50087 13.0062C7.50087 13.2503 7.69874 13.4481 7.94282 13.4481C8.1869 13.4481 8.38477 13.2503 8.38477 13.0062L8.38477 3.57801C8.38477 3.33393 8.1869 3.13607 7.94282 3.13607C7.69874 3.13607 7.50087 3.33393 7.50087 3.57801L7.50087 13.0062Z"
+                            fill="#F1F1F1" />
+                    </svg>
+
+                </div>
+                <!-- <div class="counter">
+                    <button class="minus">-</button>
+                    <input type="number" value="1">
+                    <button class="plus">+</button>
+                </div> -->
+                <p>人</p>
+            </div>
+        </section>
+
+        <!-- 聯絡資訊區塊 -->
+        <section class="contact-info">
+            <h2>聯絡資訊</h2>
+            <form>
+                <label for="name">聯絡人姓名：</label>
+                <input type="text" id="name" required>
+
+                <label for="phone">聯絡電話：</label>
+                <input type="tel" id="phone" required>
+
+                <label for="email">電子郵件：</label>
+                <input type="email" id="email" required>
+
+                <label for="address">地址：</label>
+                <input type="text" id="address" required>
+            </form>
+        </section>
+
+        <!-- 報名日期區塊 -->
+        <section class="registration-dates">
+            <h2>報名日期</h2>
+            <form>
+                <label for="date">活動日期：</label>
+                <select id="date">
+                    <option value="2024-10-01">2024-10-01</option>
+                    <option value="2024-10-02">2024-10-02</option>
+                    <option value="2024-10-03">2024-10-03</option>
+                    <option value="2024-10-04">2024-10-04</option>
+                </select>
+
+                <label for="time">入場時段：</label>
+                <select id="time">
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                </select>
+
+                <label for="remark">備註：</label>
+                <input type="text" id="remark">
+            </form>
+        </section>
+
+        <!-- 加入購物車按鈕 -->
+        <section class="add-to-cart">
+            <button>加入購物車</button>
+        </section>
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <div id="footer-content">
+            <div class="footer-content-box">
+                <div class="footer-contact">
+                    <div class="footer-contact-box">
+                        <div class="media">
+                            <a href="#"><img src="../images/shared/line.svg" alt="連接到line官方"></a>
+                            <a href="#"><img src="../images/shared/facebook.svg" alt="連接到facebook官方"></a>
+                            <a href="#"><img src="../images/shared/instagram.svg" alt="連接到instagram官方"></a>
+                        </div>
+
+                        <address class="information">
+                            <div>地址：台北市中正區農村路123號</div>
+                            <div>電話：+886-2-1234-5678</div>
+                            <div>電子郵件：info@farmersbusy.com</div>
+                            <div>傳真：+886-2-1234-5679</div>
+                        </address>
+                    </div>
+                    <div class="company"><img src="../images/shared/company-right.svg" alt="小農logo"></div>
+                </div>
+                <div class="footer-map">
+                    <a href="#">首頁</a>
+                    <a href="#">公益理念</a>
+                    <a href="#">關於小農</a>
+                    <a href="#">小農商城</a>
+                    <a href="#">客製果乾</a>
+                    <a href="#">GO遊趣</a>
+                    <a href="#">小農精選</a>
+                </div>
+                <div class="copyright">©小農好忙有限公司</div>
+            </div>
+        </div>
+
+        <!-- 背景 -->
+        <div>
+            <img class="footer-pre" src="../images/shared/footer-pre.png" alt="">
+            <img class="footer-back" src="../images/shared/footer-back.png" alt="">
+        </div>
+    </footer>
+<script src="./busyJs.js"></script>
+
+</body>
+
+</html>
