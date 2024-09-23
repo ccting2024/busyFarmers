@@ -92,7 +92,7 @@
     }
     
     .add-to-cart button {
-        background-color: #8cc63f;
+        background-color: var(--primaryG);
         color: white;
         padding: 15px 30px;
         border: none;
