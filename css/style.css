@@ -853,44 +853,32 @@ footer {
 }
 
 /* 夏日風情果醬 */
-
+/* 夏日風情果醬- 產銷小農 */
 #introduce .producer-box {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
     width: 80vw;
+    margin: 60px 0;
+}
+.producer .producer-img {
+    width: 22vw;
+    height: 22vw;
+    background-size: cover;
+    border-radius: 30px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+    box-shadow:  0 4px 6px #49604133;
 }
 .producer .producer-img-1 {
     background-image:url('../images/index/farmer-JhangMeiAYi.png') ;
-    width: 22vw;
-    height: 22vw;
-    background-size: cover;
-    border-radius: 30px;
-    display: flex;
-    justify-content:flex-end;
-    align-items: flex-end;
-
 }
 .producer .producer-img-2 {
     background-image:url('../images/index/farmer-SiangGuaSiang.png') ;
-    width: 22vw;
-    height: 22vw;
-    background-size: cover;
-    border-radius: 30px;
-    display: flex;
-    justify-content:flex-end;
-    align-items: flex-end;
 }
 .producer .producer-img-3 {
     background-image:url('../images/index/farmer-BeiTouJhongJia.png') ;
-    width: 22vw;
-    height: 22vw;
-    background-size: cover;
-    border-radius: 30px;
-    display: flex;
-    justify-content:flex-end;
-    align-items: flex-end;
 }
 .producer .producter-fruit {
     width: 7vw;
@@ -907,12 +895,128 @@ footer {
     line-height: 20px;
     color: var(--lightGreen);
     margin: 10px;
-}
-.producer .producer-name {
-    
-}
-    
 
+}
+.producer .producter-fruit-1 {
+    background-color: var(--primaryO);
+}     
+.producer .producter-fruit-2 {
+    background-color: #A1C25C;
+}     
+.producer .producter-fruit-3 {
+    background-color: #EB6228;
+}  
+
+.producer .producer-name {
+    font-family: 'GenSenRounded TW', 'sans-serif';
+    font-size: clamp(20px, 2vw, 22px);
+    font-weight: 500;
+    letter-spacing: .2em;
+    line-height: 20px;
+    color: var(--text);
+    margin: 38px;
+}
+/* 夏日風情果醬- 商品介紹 */
+#product-introduce {
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#product-introduce::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-image: url('../images/product/mountain-w-L.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#product-introduce h3{
+    color: var(--text2);
+}
+#product-introduce .contact-intBox{
+    display: flex;
+    width: 88vw;
+    gap: 56px;
+    padding: 30px 0;
+}
+
+#product-introduce .contact-intBox figure{
+width: 21vw;
+}
+.product-introduce-L{
+display: flex;
+flex-direction:column;
+justify-content:space-between;
+
+}
+.product-introduce-C {
+    padding: 40px 0;
+}
+.introduce-C-box {
+    display: flex;
+    padding: 30px 0;
+    
+}
+.productbox-center-numBox {
+    display: flex;
+    align-items:flex-end;
+
+}
+.productbox-center-numBox .num-L {
+    font-family: var(--NotoSans);
+    font-weight: 500;
+    font-size: clamp(120px, 10vw + 1rem, 130px);
+    color: var(--text);
+    line-height: 105px;
+    padding-bottom: 10px;
+}
+.productbox-center-numBox .num-R {
+    font-size: clamp(40px, 4vw + 1rem, 44px);
+    font-family: var(--NotoSans);
+    font-weight: 100;
+    color: var(--text);
+    padding: 0 10px;
+}
+
+.productbox-center-texBox{
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding: 5px 0;
+}
+
+.productbox-center-texBox h4 {
+    font-family: 'GenSenRounded TW', 'sans-serif';
+    font-size: clamp(24px, 2.3vw, 26px);
+    font-weight: 400;
+    letter-spacing: .2em;
+    line-height: 20px;
+    color: var(--text);
+    padding-bottom: 20px;
+}
+
+
+.productbox-center-texBox p {
+    font-family: 'GenSenRounded TW', 'sans-serif';
+    font-size: clamp(13px, 1.4vw, 15px);
+    font-weight: 300;
+    letter-spacing: .12em;
+    line-height: 28px;
+    color: var(--text);
+}
+.product-introduce-R {
+    display: flex;
+    align-items:center;
+}
 
 
 
@@ -951,7 +1055,6 @@ footer {
 
 .philanthropyBanner-tit-box {
     width: 100%;
-
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
