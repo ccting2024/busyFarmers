@@ -51,15 +51,15 @@
                     <div id="tabs-1">
                         <div class="tabs-box"><img id="cusFruitImage" src="" alt="商品櫥窗"></div>
                     </div>
-                  
+
                 </div>
                 <!-- 商品櫥窗-頁籤按鈕 -->
                 <ul class="product-tabs-btn">
                     <li><a value="tabs1"><img src="./images/product/tabs-1-elena-leya-unsplash.jpg" alt=""></a></li>
                     <li><a value="tabs2"><img src="./images/product/tabs-2-fernando-andrade-unsplash.jpg" alt=""></a>
                     </li>
-                    <li><a value="tabs3"><img src="./images/product/tabs-3-ju-lianna-unsplash.jpg" alt=""></a></li>
-                    <li><a value="tabs4"><img src="./images/product/tabs-4-rens-d-unsplash.jpg" alt=""></a>
+                    <li><a value="tabs3"><img src="./images/product/tabs-4-rens-d-unsplash.jpg" alt=""></a></li>
+                    <li><a value="tabs4"><img src="./images/product/tabs-3-ju-lianna-unsplash.jpg" alt=""></a>
                     </li>
                 </ul>
             </div>
@@ -116,29 +116,30 @@
                 <figure><img src="./images/philanthropy/spring-tit-2.svg" alt=""></figure>
             </div>
 
-            <p><b>夏日風情果醬</b> 使用的水果由下方三位小農生產提供：<br>
-                當您購買後我們會將<b>50%盈餘</b><br>
+            <p><b>《夏日風情果醬》</b> 使用的水果由下方三位小農生產提供：<br>
+                當您購買後我們會將<u>50%盈餘</u><br>
                 回饋給小農，援助農場經營和環境改善
             </p>
+            <div class="producer-box">
+                <div class="producer">
+                    <div class="producer-img-1">
+                        <div class="producter-fruit">蘋果</div>
+                    </div>
+                    <div class="producer-name">北投鐘家</div>
+                </div>
 
-            <div class="producer">
-                <div class="producer-img">
-                    <div class="producter-fruit">蘋果</div>
+                <div class="producer">
+                    <div class="producer-img-2">
+                        <div class="producter-fruit">橘子</div>
+                    </div>
+                    <div class="producer-name">張美阿姨</div>
                 </div>
-                <div class="producer-name">北投鐘家</div>
-            </div>
-
-            <div class="producer">
-                <div class="producer-img">
-                    <div class="producter-fruit">橘子</div>
+                <div class="producer">
+                    <div class="producer-img-3">
+                        <div class="producter-fruit">香瓜</div>
+                    </div>
+                    <div class="producer-name">香瓜ㄉ鄉</div>
                 </div>
-                <div class="producer-name">張美阿姨</div>
-            </div>
-            <div class="producer">
-                <div class="producer-img">
-                    <div class="producter-fruit">香瓜</div>
-                </div>
-                <div class="producer-name">香瓜ㄉ鄉</div>
             </div>
 
             <!-- <div class="ornament-box">
@@ -202,7 +203,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="product-introduce-R">
                     <figure><img src="./images/philanthropy/spring-tit-1.svg" alt=""></figure>
                 </div>
@@ -315,9 +316,9 @@
     <script src="./busyJs.js"></script>
     <script>
 
-//客製果乾-商品櫥窗
+        //客製果乾-商品櫥窗
 
-const cusWindowData = {
+        const cusWindowData = {
             tabs1: {
                 image: './images/product/tabs-1-elena-leya-unsplash.jpg',
             },
@@ -325,32 +326,33 @@ const cusWindowData = {
                 image: './images/product/tabs-2-fernando-andrade-unsplash.jpg',
             },
             tabs3: {
-                image: './images/product/tabs-3-ju-lianna-unsplash.jpg',
+                image: './images/product/tabs-4-rens-d-unsplash.jpg',
             },
             tabs4: {
-                image: './images/product/tabs-4-rens-d-unsplash.jpg',
+                image: './images/product/tabs-3-ju-lianna-unsplash.jpg',
             }
-            ,}
+            ,
+        }
 
 
         $(function () {
             $("#tabs").tabs();
-          // 為每個頁籤按鈕添加點擊事件
-    $('.product-tabs-btn li a').on('click', function (e) {
-        e.preventDefault(); // 阻止默認行為
+            // 為每個頁籤按鈕添加點擊事件
+            $('.product-tabs-btn li a').on('click', function (e) {
+                e.preventDefault(); // 阻止默認行為
 
-        // 取得點擊的頁籤按鈕的 value 屬性
-        const tabKey = $(this).attr('value');
+                // 取得點擊的頁籤按鈕的 value 屬性
+                const tabKey = $(this).attr('value');
 
-        // 根據 tabKey 更新圖片的 src 屬性
-        if (cusWindowData[tabKey]) {
-            $('#cusFruitImage').attr('src', cusWindowData[tabKey].image);
-        }
-    });
+                // 根據 tabKey 更新圖片的 src 屬性
+                if (cusWindowData[tabKey]) {
+                    $('#cusFruitImage').attr('src', cusWindowData[tabKey].image);
+                }
+            });
 
-    // 頁面加載後預設顯示第一張圖片
-    $('#cusFruitImage').attr('src', cusWindowData.tabs1.image);
-});
+            // 頁面加載後預設顯示第一張圖片
+            $('#cusFruitImage').attr('src', cusWindowData.tabs1.image);
+        });
 
 
 

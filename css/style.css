@@ -852,6 +852,70 @@ footer {
     transform: translateY(42%);
 }
 
+/* 夏日風情果醬 */
+
+#introduce .producer-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 80vw;
+}
+.producer .producer-img-1 {
+    background-image:url('../images/index/farmer-JhangMeiAYi.png') ;
+    width: 22vw;
+    height: 22vw;
+    background-size: cover;
+    border-radius: 30px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+
+}
+.producer .producer-img-2 {
+    background-image:url('../images/index/farmer-SiangGuaSiang.png') ;
+    width: 22vw;
+    height: 22vw;
+    background-size: cover;
+    border-radius: 30px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+.producer .producer-img-3 {
+    background-image:url('../images/index/farmer-BeiTouJhongJia.png') ;
+    width: 22vw;
+    height: 22vw;
+    background-size: cover;
+    border-radius: 30px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+.producer .producter-fruit {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 99px;
+    border: clamp(12px, 3vw, 14px) solid #fff;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: 'GenSenRounded TW', 'sans-serif';
+    font-size: clamp(20px, 2vw, 22px);
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 20px;
+    color: var(--lightGreen);
+    margin: 10px;
+}
+.producer .producer-name {
+    
+}
+    
+
+
+
+
 /* 公益理念 */
 /* 公益理念-banner */
 
@@ -1407,24 +1471,28 @@ footer {
 }
 .husBox {
     display: flex;
-    justify-content: space-between;
 }
 .hus {
     display: flex;
     padding-bottom:10px;
     align-items:center;
 }
+.circle {
+    background-color: var(--primaryO);
+    height: 16px;
+    width: 16px;
+    border-radius: 99px;
+}
 .hus h5 {
     font-family: var(--GenSenRounded-L);
     color: var(--text2);
-    font-size: clamp(16px, 1.3vw + 1rem, 20px);
+    font-size: clamp(11px, 1.3vw + 1rem, 14px);
     letter-spacing: .1em;
     padding: 0 10px 0 6px;
 
 }
 .hus-last {
     padding-right: 0;
-
 }
 
 .product-part h6 {
@@ -1637,11 +1705,8 @@ footer {
 }
 
 #picking .circle {
-    background-color: var(--primaryO);
     height: 25px;
     width: 25px;
-    border-radius: 99px;
-
 }
 
 #picking h4 {
