@@ -861,32 +861,37 @@ footer {
     width: 80vw;
     margin: 60px 0;
 }
+
 .producer .producer-img {
     width: 22vw;
     height: 22vw;
     background-size: cover;
     border-radius: 30px;
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: flex-end;
-    box-shadow:  0 4px 6px #49604133;
+    box-shadow: 0 4px 6px #49604133;
 }
+
 .producer .producer-img-1 {
-    background-image:url('../images/index/farmer-JhangMeiAYi.png') ;
+    background-image: url('../images/index/farmer-JhangMeiAYi.png');
 }
+
 .producer .producer-img-2 {
-    background-image:url('../images/index/farmer-SiangGuaSiang.png') ;
+    background-image: url('../images/index/farmer-SiangGuaSiang.png');
 }
+
 .producer .producer-img-3 {
-    background-image:url('../images/index/farmer-BeiTouJhongJia.png') ;
+    background-image: url('../images/index/farmer-BeiTouJhongJia.png');
 }
+
 .producer .producter-fruit {
     width: 7vw;
     height: 7vw;
     border-radius: 99px;
     border: clamp(12px, 3vw, 14px) solid #fff;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     font-family: 'GenSenRounded TW', 'sans-serif';
     font-size: clamp(20px, 2vw, 22px);
@@ -897,15 +902,18 @@ footer {
     margin: 10px;
 
 }
+
 .producer .producter-fruit-1 {
     background-color: var(--primaryO);
-}     
+}
+
 .producer .producter-fruit-2 {
     background-color: #A1C25C;
-}     
+}
+
 .producer .producter-fruit-3 {
     background-color: #EB6228;
-}  
+}
 
 .producer .producer-name {
     font-family: 'GenSenRounded TW', 'sans-serif';
@@ -916,14 +924,61 @@ footer {
     color: var(--text);
     margin: 38px;
 }
+
+.pro-ornament-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.pro-ornament-box figure {
+    &:nth-child(1) {
+        position: absolute;
+        z-index: 2;
+        width: 5%;
+        height: 15%;
+        transform: translateX(333%) translateY(70%);
+    }
+
+    &:nth-child(2) {
+        position: absolute;
+        z-index: 2;
+        width: 10%;
+        height: 9%;
+        transform: translateX(45%) translateY(100%);
+    }
+    &:nth-child(3) {
+        position: absolute;
+        z-index: 2;
+        width: 15%;
+        height: 15%;
+        transform: translateX(20%) translateY(90%);
+    }
+    &:nth-child(4) {
+        position: absolute;
+        z-index: 2;
+        width: 8%;
+        height: 15%;
+        transform: translateX(1110%) translateY(120%);
+    }
+    &:nth-child(5) {
+        position: absolute;
+        z-index: 2;
+        width: 32%;
+        height: 15%;
+        transform: translateX(220%) translateY(130%);
+    }
+}
+
+
 /* 夏日風情果醬- 商品介紹 */
 #product-introduce {
     width: 100%;
     height: 150vh;
     position: relative;
     display: flex;
-    flex-direction:column;
-    align-items:center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #product-introduce::before {
@@ -939,38 +994,44 @@ footer {
     z-index: -1;
 }
 
-#product-introduce h3{
+#product-introduce h3 {
     color: var(--text2);
 }
-#product-introduce .contact-intBox{
+
+#product-introduce .contact-intBox {
     display: flex;
     width: 88vw;
     gap: 56px;
     padding: 30px 0;
 }
 
-#product-introduce .contact-intBox figure{
-width: 21vw;
+#product-introduce .contact-intBox figure {
+    width: 21vw;
 }
-.product-introduce-L{
-display: flex;
-flex-direction:column;
-justify-content:space-between;
+
+.product-introduce-L {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
+
 .product-introduce-C {
     padding: 40px 0;
 }
+
 .introduce-C-box {
     display: flex;
     padding: 30px 0;
-    
-}
-.productbox-center-numBox {
-    display: flex;
-    align-items:flex-end;
 
 }
+
+.productbox-center-numBox {
+    display: flex;
+    align-items: flex-end;
+
+}
+
 .productbox-center-numBox .num-L {
     font-family: var(--NotoSans);
     font-weight: 500;
@@ -979,6 +1040,7 @@ justify-content:space-between;
     line-height: 105px;
     padding-bottom: 10px;
 }
+
 .productbox-center-numBox .num-R {
     font-size: clamp(40px, 4vw + 1rem, 44px);
     font-family: var(--NotoSans);
@@ -987,10 +1049,10 @@ justify-content:space-between;
     padding: 0 10px;
 }
 
-.productbox-center-texBox{
+.productbox-center-texBox {
     display: flex;
-    flex-direction:column;
-    justify-content:flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
     padding: 5px 0;
 }
 
@@ -1013,11 +1075,70 @@ justify-content:space-between;
     line-height: 28px;
     color: var(--text);
 }
+
 .product-introduce-R {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
+#product-introduce .pro-ornament-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#product-introduce .pro-ornament-box figure {
+    &:nth-child(1) {
+        position: absolute;
+        z-index: 2;
+        width: 9%;
+        height: 15%;
+        transform: translateX(90%) translateY(85%) rotate(250deg);
+    }
+
+    &:nth-child(2) {
+        position: absolute;
+        z-index: 2;
+        width: 10%;
+        height: 9%;
+        transform: translateX(45%) translateY(100%);
+    }
+    &:nth-child(3) {
+        position: absolute;
+        z-index: 2;
+        width: 10%;
+        height: 10%;
+        transform: translateX(560%) translateY(485%);
+    }
+    &:nth-child(4) {
+        position: absolute;
+        z-index: 2;
+        width: 8%;
+        height: 15%;
+        transform: translateX(1010%) translateY(620%)  rotate(170deg);
+    }
+    &:nth-child(5) {
+        position: absolute;
+        z-index: 2;
+        width: 10%;
+        height: 15%;
+        transform: translateX(60%) translateY(735%) rotate(172deg);
+    }
+    &:nth-child(6) {
+        position: absolute;
+        z-index: 2;
+        width: 10%;
+        height: 15%;
+        transform: translateX(790%) translateY(300%) rotate(175deg);
+    }
+    &:nth-child(7) {
+        position: absolute;
+        z-index: 2;
+        width: 10%;
+        height: 15%;
+        transform: translateX(28%) translateY(400%) rotate(165deg);
+    }
+}
 
 
 /* 公益理念 */
@@ -1572,20 +1693,24 @@ justify-content:space-between;
     font-size: clamp(26px, 1.3vw + 1rem, 30px);
     letter-spacing: .1em;
 }
+
 .husBox {
     display: flex;
 }
+
 .hus {
     display: flex;
-    padding-bottom:10px;
-    align-items:center;
+    padding-bottom: 10px;
+    align-items: center;
 }
+
 .circle {
     background-color: var(--primaryO);
     height: 16px;
     width: 16px;
     border-radius: 99px;
 }
+
 .hus h5 {
     font-family: var(--GenSenRounded-L);
     color: var(--text2);
@@ -1594,6 +1719,7 @@ justify-content:space-between;
     padding: 0 10px 0 6px;
 
 }
+
 .hus-last {
     padding-right: 0;
 }
@@ -1632,6 +1758,7 @@ justify-content:space-between;
 .product-part-ToBuy {
     display: flex;
     flex-direction: column;
+    align-items:flex-end;
     justify-content: space-between;
     height: 7.5vw;
     padding-left: 32px;
